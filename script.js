@@ -24,14 +24,20 @@ window.addEventListener('resize', function() {
 
 // Gallery Lightbox
 var galleryImages = [
-  'images/hero-climber.jpg',
+  'images/oliver-treetop-selfie.jpg',
+  'images/bucket-truck-removal.jpg',
+  'images/spar-pole-chipper.jpg',
+  'images/tall-tree-climb.jpg',
   'images/spar-pole-climb.jpg',
+  'images/crew-chipper-work.jpg',
   'images/stump-chainsaw.jpg',
+  'images/valley-stump-view.jpg',
   'images/snow-crew-1.jpg',
-  'images/snow-crew-2.jpg',
+  'images/fresh-cut-log-snow.jpg',
   'images/hillside-clearing.jpg',
   'images/forest-thinning.jpg',
-  'images/climbing-high.jpg'
+  'images/climbing-high.jpg',
+  'images/hero-climber.jpg'
 ];
 var currentImage = 0;
 
@@ -255,32 +261,129 @@ function toggleFaq(el) {
 
 // --- Chatbot ---
 (function() {
-  var chatbotQA = [
+  var chatbotKB = [
     {
-      q: "What services do you offer?",
-      a: "We offer danger tree removal, tree trimming & pruning, land clearing, emergency tree removal (24/7), and wildfire prevention & FireSmart services. For details on your specific situation, give us a call — every job is different!"
+      keywords: ['service', 'offer', 'do you do', 'what do you', 'help with'],
+      a: "We offer danger tree removal, tree trimming & pruning, land clearing, emergency tree removal (24/7), and wildfire prevention & FireSmart services. Every job is different — give us a call for details on your situation!"
     },
     {
-      q: "What areas do you serve?",
-      a: "We serve the entire Boundary region of BC — Christina Lake, Grand Forks, Greenwood, Rock Creek, Osoyoos, and all surrounding areas. If you're not sure whether we cover your area, just give us a call!"
+      keywords: ['area', 'serve', 'location', 'where', 'christina', 'grand forks', 'greenwood', 'rock creek', 'osoyoos', 'boundary', 'cover', 'travel'],
+      a: "We serve the entire Boundary region of BC — Christina Lake, Grand Forks, Greenwood, Rock Creek, Osoyoos, and all surrounding areas. Not sure if we cover your spot? Give us a call!"
     },
     {
-      q: "Are you insured?",
-      a: "Yes! We carry $2M+ in commercial liability insurance. We're happy to provide proof of insurance on request. For any questions about coverage, call us and we'll walk you through it."
+      keywords: ['insur', 'liability', 'covered', 'bonded', 'licensed'],
+      a: "Yes! We carry $2M+ in commercial liability insurance. We're happy to provide proof of insurance on request. Call us and we'll walk you through it."
     },
     {
-      q: "How much does it cost?",
-      a: "Every tree and property is different, so we can't give accurate pricing without seeing the job first. The good news: estimates are always free! Give us a call or fill out our contact form and we'll come take a look."
+      keywords: ['cost', 'price', 'how much', 'expensive', 'cheap', 'afford', 'rate', 'charge', 'fee', 'estimate', 'budget'],
+      a: "Every tree and property is different, so we can't give accurate pricing without seeing the job. The good news: estimates are always free! Call us or fill out our contact form and we'll come take a look."
     },
     {
-      q: "Do you handle emergencies?",
-      a: "Absolutely — we respond 24/7 to emergency tree situations. Storm damage, trees on structures, road blockages — call us right away at 778-828-3456 and we'll get there as fast as we can."
+      keywords: ['emergency', 'urgent', 'storm', 'fallen', 'fell', 'down on', 'crashed', '24/7', 'immediate', 'asap', 'right now'],
+      a: "We respond 24/7 to emergency tree situations — storm damage, trees on structures, road blockages. Call us right away at 778-828-3456 and we'll get there as fast as we can."
     },
     {
-      q: "How do I get a quote?",
-      a: "Easy! Call us at 778-828-3456, or fill out the form on our Contact page. Estimates are always free and no-obligation. We'll come out, assess the job, and give you a clear price."
+      keywords: ['quote', 'free estimate', 'book', 'schedule', 'appointment', 'consultation', 'come out', 'assessment'],
+      a: "Call us at 778-828-3456, or fill out the form on our Contact page. Estimates are always free and no-obligation. We'll come out, assess the job, and give you a clear price."
+    },
+    {
+      keywords: ['danger', 'hazard', 'leaning', 'falling', 'risk', 'unsafe', 'threatening'],
+      a: "Danger tree removal is our specialty. If a tree is leaning, has cracked trunk, dead branches, or is threatening a structure, don't wait — call us at 778-828-3456 for a professional assessment."
+    },
+    {
+      keywords: ['trim', 'prun', 'branch', 'limb', 'shape', 'crown', 'deadwood', 'thin'],
+      a: "We handle all trimming and pruning — crown reduction, deadwood removal, clearance pruning from structures and power lines, and shaping for health and aesthetics. Call for a free assessment!"
+    },
+    {
+      keywords: ['clear', 'lot', 'land', 'brush', 'undergrowth', 'development', 'build', 'construction'],
+      a: "We provide land clearing for construction, forest thinning, brush removal, trail clearing, and fire mitigation. Year-round service across the Boundary region. Call us for a free estimate!"
+    },
+    {
+      keywords: ['fire', 'wildfire', 'firesmart', 'fuel', 'defensible', 'prevention', 'burn'],
+      a: "We help create defensible space around your property — forest thinning, fuel reduction, brush and ladder fuel removal, and hazard tree identification. Protect your home before fire season hits. Call for a free FireSmart assessment!"
+    },
+    {
+      keywords: ['stump', 'grind', 'root', 'left over'],
+      a: "Great question — we can discuss stump options when we assess your property. Every situation is different. Give us a call at 778-828-3456 and we'll figure out the best approach for your specific job."
+    },
+    {
+      keywords: ['permit', 'bylaw', 'allowed', 'legal', 'permission', 'municipal', 'city'],
+      a: "Permit requirements vary by municipality in BC. Some areas require permits for certain trees. We can help you navigate local bylaws — call us and we'll point you in the right direction."
+    },
+    {
+      keywords: ['power line', 'hydro', 'electrical', 'utility', 'wire'],
+      a: "Trees near power lines require specialized training and equipment. We have experience with utility line clearance work. Never attempt this yourself — call us at 778-828-3456."
+    },
+    {
+      keywords: ['winter', 'snow', 'cold', 'frozen', 'ice', 'season', 'year round'],
+      a: "We work year-round, including winter. Snow and ice don't stop us — our crew is equipped for cold-weather operations. Call anytime!"
+    },
+    {
+      keywords: ['experience', 'long', 'years', 'how long', 'established', 'history', 'since'],
+      a: "Jewel Creek Tree Service has been serving the Boundary region since 2012 — that's over 14 years of professional tree work. We know these forests and properties inside out."
+    },
+    {
+      keywords: ['review', 'rating', 'reputation', 'google', 'recommend', 'trust', 'reliable'],
+      a: "We have a 5.0 rating on Google with 18 five-star reviews. Our reputation is built on safe, quality work and honest communication. Check out our Google reviews!"
+    },
+    {
+      keywords: ['diy', 'myself', 'own', 'chainsaw', 'self'],
+      a: "Tree work is one of the most dangerous jobs out there — falling timber, chainsaws, heights. Without proper training and equipment, the risks are serious. Please call a professional. We're happy to help and estimates are free!"
+    },
+    {
+      keywords: ['wood', 'debris', 'cleanup', 'haul', 'chip', 'firewood', 'mess', 'leave behind'],
+      a: "We handle full cleanup — we don't leave a mess. What happens with the wood and debris depends on the job and your preferences. We'll discuss all that during the estimate."
+    },
+    {
+      keywords: ['how long', 'time', 'duration', 'take', 'fast', 'quick'],
+      a: "Job duration depends on the tree size, complexity, and access. Simple removals can be done in a few hours; complex jobs may take a day or more. We'll give you a clear timeline during the estimate."
+    },
+    {
+      keywords: ['phone', 'call', 'contact', 'reach', 'number', 'talk'],
+      a: "You can reach us at 778-828-3456 (mobile) or 250-445-6789 (office). Or email jewelcreektreeservice@gmail.com. We respond quickly!"
+    },
+    {
+      keywords: ['email', 'mail', 'message', 'write'],
+      a: "You can email us at jewelcreektreeservice@gmail.com, or use the contact form on our website. We'll get back to you as soon as possible!"
+    },
+    {
+      keywords: ['hello', 'hi', 'hey', 'sup', 'yo', 'good morning', 'good afternoon', 'howdy'],
+      a: "Hey there! I can answer basic questions about our services, pricing, service area, and more. What would you like to know? For anything specific to your property, our experts are just a call away."
+    },
+    {
+      keywords: ['thank', 'thanks', 'appreciate', 'cheers', 'awesome', 'great', 'perfect'],
+      a: "You're welcome! If you need anything else, just ask. And when you're ready to get your tree situation handled, give us a call at 778-828-3456 — we're always happy to help!"
     }
   ];
+
+  var quickOptions = [
+    "What services do you offer?",
+    "How much does it cost?",
+    "Do you handle emergencies?",
+    "What areas do you serve?",
+    "Are you insured?",
+    "How do I get a quote?"
+  ];
+
+  function findAnswer(input) {
+    var lower = input.toLowerCase();
+    var bestMatch = null;
+    var bestScore = 0;
+    for (var i = 0; i < chatbotKB.length; i++) {
+      var score = 0;
+      for (var k = 0; k < chatbotKB[i].keywords.length; k++) {
+        if (lower.indexOf(chatbotKB[i].keywords[k]) !== -1) {
+          score++;
+        }
+      }
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = chatbotKB[i];
+      }
+    }
+    if (bestMatch) return bestMatch.a;
+    return "That's a great question, but I'd rather have one of our experts give you an accurate answer. Call us at 778-828-3456 or fill out the contact form — we're happy to help!";
+  }
 
   document.addEventListener('DOMContentLoaded', function() {
     var toggle = document.getElementById('chatbotToggle');
@@ -288,9 +391,14 @@ function toggleFaq(el) {
     var closeBtn = document.getElementById('chatbotClose');
     var messagesEl = document.getElementById('chatbotMessages');
     var optionsEl = document.getElementById('chatbotOptions');
+    var inputEl = document.getElementById('chatbotInput');
+    var sendBtn = document.getElementById('chatbotSend');
     if (!toggle || !win) return;
 
     function addMessage(text, type) {
+      // Remove typing indicator if present
+      var existing = messagesEl.querySelector('.chat-typing');
+      if (existing) existing.remove();
       var msg = document.createElement('div');
       msg.className = 'chat-msg ' + type;
       msg.textContent = text;
@@ -298,16 +406,24 @@ function toggleFaq(el) {
       messagesEl.scrollTop = messagesEl.scrollHeight;
     }
 
-    function showOptions() {
+    function showTyping() {
+      var dot = document.createElement('div');
+      dot.className = 'chat-msg bot chat-typing';
+      dot.innerHTML = '<span class="typing-dots"><span></span><span></span><span></span></span>';
+      messagesEl.appendChild(dot);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function showQuickOptions() {
       optionsEl.innerHTML = '';
-      chatbotQA.forEach(function(item, i) {
+      quickOptions.forEach(function(q) {
         var btn = document.createElement('button');
         btn.className = 'chatbot-option';
-        btn.textContent = item.q;
-        btn.onclick = function() { handleQuestion(i); };
+        btn.textContent = q;
+        btn.onclick = function() { handleUserInput(q); };
         optionsEl.appendChild(btn);
       });
-      // Add horn call button
+      // Horn call button
       var hornBtn = document.createElement('button');
       hornBtn.className = 'horn-call-btn';
       hornBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1.01l-2.22 2.12z"/></svg> Call an Expert!';
@@ -315,21 +431,41 @@ function toggleFaq(el) {
       optionsEl.appendChild(hornBtn);
     }
 
-    function handleQuestion(index) {
-      var qa = chatbotQA[index];
-      addMessage(qa.q, 'user');
+    function handleUserInput(text) {
+      if (!text.trim()) return;
+      addMessage(text, 'user');
       optionsEl.innerHTML = '';
+      if (inputEl) inputEl.value = '';
+      showTyping();
+      var delay = 600 + Math.random() * 600;
       setTimeout(function() {
-        addMessage(qa.a, 'bot');
-        setTimeout(showOptions, 400);
-      }, 500);
+        var answer = findAnswer(text);
+        addMessage(answer, 'bot');
+        setTimeout(showQuickOptions, 300);
+      }, delay);
+    }
+
+    // Text input send
+    if (sendBtn) {
+      sendBtn.addEventListener('click', function() {
+        if (inputEl) handleUserInput(inputEl.value);
+      });
+    }
+    if (inputEl) {
+      inputEl.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleUserInput(inputEl.value);
+        }
+      });
     }
 
     toggle.addEventListener('click', function() {
       win.classList.toggle('open');
       if (win.classList.contains('open') && messagesEl.children.length === 0) {
-        addMessage("Hey! I'm the Jewel Creek bot. I can answer basic questions, but for anything specific to your property, you'll want to talk to one of our experts. What can I help with?", 'bot');
-        showOptions();
+        addMessage("Hey! I'm the Jewel Creek bot. Ask me anything about our services, pricing, service area, or more. For anything specific to your property, you'll want to talk to one of our experts.", 'bot');
+        showQuickOptions();
+        if (inputEl) setTimeout(function() { inputEl.focus(); }, 300);
       }
     });
 
