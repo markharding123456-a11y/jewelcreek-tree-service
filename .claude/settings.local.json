@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"C:\\\\Users\\\\m.harding.HYDRACLEAN\\\\Desktop\\\\Olivers website\" -type f -exec ls -lh {})",
+      "Bash(sort -k2)",
+      "Bash(cp \"att.ZrWWOegue_vEdUMrmlKEfHjfHf_FhL_StDOQ6v5sH88.JPG\" \"../images/logo.jpg\")",
+      "Bash(cp \"att.TxOT-I_ZtCQ4fHjblowhv_NBE0h88-grCRrcONXvMjs.JPG\" \"../images/hero-climber.jpg\")",
+      "Bash(cp \"att.qft_iTd7_m_EERukVFoOivtkmGXQgwA_6fpt65juDXs.JPG\" \"../images/spar-pole-climb.jpg\")",
+      "Bash(cp \"att.1TTiT9AXwvw7rw5DZzFWjL1zugsg2LmaAaC_mTBeOM4.JPG\" \"../images/stump-chainsaw.jpg\")",
+      "Bash(cp \"att.2tThBsxfHpqCWLxtAGegcnYbA49ZFo6VkcwzK1qQkZc.JPG\" \"../images/snow-crew-1.jpg\")",
+      "Bash(cp \"att.bKknjujbAbF5FL6cxyRCVcVSrRRRVo80XeNZbdxKVI4.JPG\" \"../images/snow-crew-2.jpg\")",
+      "Bash(cp \"att.3S1kGiDMl7Kt9RGJXkwfuRGw3n34NVZiVClsGlE176Y.JPG\" \"../images/hillside-clearing.jpg\")",
+      "Bash(cp \"att.gx-4yTO-byvyq5Q7JYlXxSjk5atR24nHKfLpN1bkPQs.dat.JPEG\" \"../images/forest-thinning.jpg\")",
+      "Bash(cp \"att.hkDeFjLs7W2MeCvb3Yool5WZw8GSdSPkbFu1SA5LwEg.dat.JPEG\" \"../images/climbing-high.jpg\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(start http://localhost:8080)",
+      "WebFetch(domain:share.google)",
+      "WebFetch(domain:www.google.com)",
+      "WebSearch",
+      "WebFetch(domain:maps.app.goo.gl)"
+    ]
+  }
+}
