@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jewelcreektreeservice.ca/sitemap.xml
+Sitemap: https://jewelcreektreeservice.com/sitemap.xml
