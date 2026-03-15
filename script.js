@@ -264,95 +264,95 @@ function toggleFaq(el) {
   var chatbotKB = [
     {
       keywords: ['service', 'offer', 'do you do', 'what do you', 'help with'],
-      a: "We offer danger tree removal, tree trimming & pruning, land clearing, emergency tree removal (24/7), and wildfire prevention & FireSmart services. Every job is different — give us a call for details on your situation!"
+      a: "We do danger tree removal, trimming & pruning, land clearing, 24/7 emergency removal, and wildfire prevention & FireSmart work. What are you dealing with?"
     },
     {
       keywords: ['area', 'serve', 'location', 'where', 'christina', 'grand forks', 'greenwood', 'rock creek', 'osoyoos', 'boundary', 'cover', 'travel'],
-      a: "We serve the entire Boundary region of BC — Christina Lake, Grand Forks, Greenwood, Rock Creek, Osoyoos, and all surrounding areas. Not sure if we cover your spot? Give us a call!"
+      a: "We cover the whole Boundary region - Christina Lake, Grand Forks, Greenwood, Rock Creek, Osoyoos, and everywhere in between."
     },
     {
       keywords: ['insur', 'liability', 'covered', 'bonded', 'licensed'],
-      a: "Yes! We carry $2M+ in commercial liability insurance. We're happy to provide proof of insurance on request. Call us and we'll walk you through it."
+      a: "Yep, $2M+ in commercial liability insurance. We can provide proof of insurance anytime - just ask."
     },
     {
       keywords: ['cost', 'price', 'how much', 'expensive', 'cheap', 'afford', 'rate', 'charge', 'fee', 'estimate', 'budget'],
-      a: "Every tree and property is different, so we can't give accurate pricing without seeing the job. The good news: estimates are always free! Call us or fill out our contact form and we'll come take a look."
+      a: "Pricing depends on the tree, the location, and how complex the job is. We'd need to see it in person to give you an accurate number. Estimates are always free though!"
     },
     {
       keywords: ['emergency', 'urgent', 'storm', 'fallen', 'fell', 'down on', 'crashed', '24/7', 'immediate', 'asap', 'right now'],
-      a: "We respond 24/7 to emergency tree situations — storm damage, trees on structures, road blockages. Call us right away at 778-828-3456 and we'll get there as fast as we can."
+      a: "If it's an emergency, don't wait - call 778-828-3456 right now. We respond 24/7 for storm damage, trees on structures, and road blockages."
     },
     {
       keywords: ['quote', 'free estimate', 'book', 'schedule', 'appointment', 'consultation', 'come out', 'assessment'],
-      a: "Call us at 778-828-3456, or fill out the form on our Contact page. Estimates are always free and no-obligation. We'll come out, assess the job, and give you a clear price."
+      a: "Easiest way is to call 778-828-3456 or fill out the form on the Contact page. We'll come out, look at the job, and give you a straightforward price. No obligation."
     },
     {
       keywords: ['danger', 'hazard', 'leaning', 'falling', 'risk', 'unsafe', 'threatening'],
-      a: "Danger tree removal is our specialty. If a tree is leaning, has cracked trunk, dead branches, or is threatening a structure, don't wait — call us at 778-828-3456 for a professional assessment."
+      a: "Danger trees are our bread and butter. Leaning trunks, cracked wood, dead branches over your roof - we deal with all of it. Don't wait for a windstorm to make the decision for you."
     },
     {
       keywords: ['trim', 'prun', 'branch', 'limb', 'shape', 'crown', 'deadwood', 'thin'],
-      a: "We handle all trimming and pruning — crown reduction, deadwood removal, clearance pruning from structures and power lines, and shaping for health and aesthetics. Call for a free assessment!"
+      a: "We do crown reductions, deadwood removal, clearance pruning near structures and power lines, and general shaping. Keeps your trees healthy and your property safe."
     },
     {
       keywords: ['clear', 'lot', 'land', 'brush', 'undergrowth', 'development', 'build', 'construction'],
-      a: "We provide land clearing for construction, forest thinning, brush removal, trail clearing, and fire mitigation. Year-round service across the Boundary region. Call us for a free estimate!"
+      a: "Lot clearing for builds, forest thinning, brush removal, trail clearing - we do it all year-round across the Boundary region."
     },
     {
       keywords: ['fire', 'wildfire', 'firesmart', 'fuel', 'defensible', 'prevention', 'burn'],
-      a: "We help create defensible space around your property — forest thinning, fuel reduction, brush and ladder fuel removal, and hazard tree identification. Protect your home before fire season hits. Call for a free FireSmart assessment!"
+      a: "We create defensible space around properties - thinning, fuel reduction, ladder fuel removal, hazard tree ID. Worth doing before fire season, not during."
     },
     {
       keywords: ['stump', 'grind', 'root', 'left over'],
-      a: "Great question — we can discuss stump options when we assess your property. Every situation is different. Give us a call at 778-828-3456 and we'll figure out the best approach for your specific job."
+      a: "Stump options depend on the situation - grinding, removal, or leaving it flush-cut. We can figure out what makes sense when we look at the job."
     },
     {
       keywords: ['permit', 'bylaw', 'allowed', 'legal', 'permission', 'municipal', 'city'],
-      a: "Permit requirements vary by municipality in BC. Some areas require permits for certain trees. We can help you navigate local bylaws — call us and we'll point you in the right direction."
+      a: "Permit rules vary by municipality in BC. Some areas need permits for certain tree sizes, especially near waterways. We can help you sort out the local requirements."
     },
     {
       keywords: ['power line', 'hydro', 'electrical', 'utility', 'wire'],
-      a: "Trees near power lines require specialized training and equipment. We have experience with utility line clearance work. Never attempt this yourself — call us at 778-828-3456."
+      a: "We do utility line clearance work and coordinate with BC Hydro when needed. Definitely not a DIY situation - specialized training and equipment required."
     },
     {
       keywords: ['winter', 'snow', 'cold', 'frozen', 'ice', 'season', 'year round'],
-      a: "We work year-round, including winter. Snow and ice don't stop us — our crew is equipped for cold-weather operations. Call anytime!"
+      a: "We work year-round. Snow and ice don't stop us - our crew is set up for cold-weather operations."
     },
     {
       keywords: ['experience', 'long', 'years', 'how long', 'established', 'history', 'since'],
-      a: "Jewel Creek Tree Service has been serving the Boundary region since 2012 — that's over 14 years of professional tree work. We know these forests and properties inside out."
+      a: "Been at it since 2012 - over 14 years of tree work in the Boundary region. We know these forests and properties inside out."
     },
     {
       keywords: ['review', 'rating', 'reputation', 'google', 'recommend', 'trust', 'reliable'],
-      a: "We have a 5.0 rating on Google with 18 five-star reviews. Our reputation is built on safe, quality work and honest communication. Check out our Google reviews!"
+      a: "5.0 on Google with 18 five-star reviews. We let the work speak for itself."
     },
     {
       keywords: ['diy', 'myself', 'own', 'chainsaw', 'self'],
-      a: "Tree work is one of the most dangerous jobs out there — falling timber, chainsaws, heights. Without proper training and equipment, the risks are serious. Please call a professional. We're happy to help and estimates are free!"
+      a: "Honestly? Tree work is one of the most dangerous jobs out there. Falling timber, chainsaws at height, unpredictable wood - the risks are real. Leave it to the pros."
     },
     {
       keywords: ['wood', 'debris', 'cleanup', 'haul', 'chip', 'firewood', 'mess', 'leave behind'],
-      a: "We handle full cleanup — we don't leave a mess. What happens with the wood and debris depends on the job and your preferences. We'll discuss all that during the estimate."
+      a: "We don't leave a mess. Wood can be bucked into firewood lengths for you, or we haul everything away. Your call - we'll sort it out during the estimate."
     },
     {
       keywords: ['how long', 'time', 'duration', 'take', 'fast', 'quick'],
-      a: "Job duration depends on the tree size, complexity, and access. Simple removals can be done in a few hours; complex jobs may take a day or more. We'll give you a clear timeline during the estimate."
+      a: "Depends on the job. A straightforward removal might be a few hours; something complex near a structure could take a full day. We'll give you a clear timeline upfront."
     },
     {
       keywords: ['phone', 'call', 'contact', 'reach', 'number', 'talk'],
-      a: "You can reach us at 778-828-3456 (mobile) or 250-445-6789 (office). Or email jewelcreektreeservice@gmail.com. We respond quickly!"
+      a: "778-828-3456 (mobile) or 250-445-6789 (office). You can also email jewelcreektreeservice@gmail.com."
     },
     {
       keywords: ['email', 'mail', 'message', 'write'],
-      a: "You can email us at jewelcreektreeservice@gmail.com, or use the contact form on our website. We'll get back to you as soon as possible!"
+      a: "Shoot us an email at jewelcreektreeservice@gmail.com, or use the contact form on the website. We'll get back to you quick."
     },
     {
       keywords: ['hello', 'hi', 'hey', 'sup', 'yo', 'good morning', 'good afternoon', 'howdy'],
-      a: "Hey there! I can answer basic questions about our services, pricing, service area, and more. What would you like to know? For anything specific to your property, our experts are just a call away."
+      a: "Hey! Ask me anything about our services, pricing, service area, or how things work. What's on your mind?"
     },
     {
       keywords: ['thank', 'thanks', 'appreciate', 'cheers', 'awesome', 'great', 'perfect'],
-      a: "You're welcome! If you need anything else, just ask. And when you're ready to get your tree situation handled, give us a call at 778-828-3456 — we're always happy to help!"
+      a: "Anytime! If something else comes up, just ask. Or hit that call button when you're ready to get things rolling."
     }
   ];
 
@@ -382,7 +382,7 @@ function toggleFaq(el) {
       }
     }
     if (bestMatch) return bestMatch.a;
-    return "That's a great question, but I'd rather have one of our experts give you an accurate answer. Call us at 778-828-3456 or fill out the contact form — we're happy to help!";
+    return "Good question - but I'd want one of our guys to give you the right answer on that. Hit the call button below or drop us a message through the Contact page.";
   }
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -463,7 +463,7 @@ function toggleFaq(el) {
     toggle.addEventListener('click', function() {
       win.classList.toggle('open');
       if (win.classList.contains('open') && messagesEl.children.length === 0) {
-        addMessage("Hey! I'm the Jewel Creek bot. Ask me anything about our services, pricing, service area, or more. For anything specific to your property, you'll want to talk to one of our experts.", 'bot');
+        addMessage("Hey! I'm the Jewel Creek bot. Ask me anything - services, pricing, areas we cover, whatever. For property-specific stuff, you'll want to talk to one of our guys directly.", 'bot');
         showQuickOptions();
         if (inputEl) setTimeout(function() { inputEl.focus(); }, 300);
       }
