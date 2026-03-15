@@ -252,3 +252,167 @@ function toggleFaq(el) {
     item.classList.add('active');
   }
 }
+
+// --- Chatbot ---
+(function() {
+  var chatbotQA = [
+    {
+      q: "What services do you offer?",
+      a: "We offer danger tree removal, tree trimming & pruning, land clearing, emergency tree removal (24/7), and wildfire prevention & FireSmart services. For details on your specific situation, give us a call — every job is different!"
+    },
+    {
+      q: "What areas do you serve?",
+      a: "We serve the entire Boundary region of BC — Christina Lake, Grand Forks, Greenwood, Rock Creek, Osoyoos, and all surrounding areas. If you're not sure whether we cover your area, just give us a call!"
+    },
+    {
+      q: "Are you insured?",
+      a: "Yes! We carry $2M+ in commercial liability insurance. We're happy to provide proof of insurance on request. For any questions about coverage, call us and we'll walk you through it."
+    },
+    {
+      q: "How much does it cost?",
+      a: "Every tree and property is different, so we can't give accurate pricing without seeing the job first. The good news: estimates are always free! Give us a call or fill out our contact form and we'll come take a look."
+    },
+    {
+      q: "Do you handle emergencies?",
+      a: "Absolutely — we respond 24/7 to emergency tree situations. Storm damage, trees on structures, road blockages — call us right away at 778-828-3456 and we'll get there as fast as we can."
+    },
+    {
+      q: "How do I get a quote?",
+      a: "Easy! Call us at 778-828-3456, or fill out the form on our Contact page. Estimates are always free and no-obligation. We'll come out, assess the job, and give you a clear price."
+    }
+  ];
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.getElementById('chatbotToggle');
+    var win = document.getElementById('chatbotWindow');
+    var closeBtn = document.getElementById('chatbotClose');
+    var messagesEl = document.getElementById('chatbotMessages');
+    var optionsEl = document.getElementById('chatbotOptions');
+    if (!toggle || !win) return;
+
+    function addMessage(text, type) {
+      var msg = document.createElement('div');
+      msg.className = 'chat-msg ' + type;
+      msg.textContent = text;
+      messagesEl.appendChild(msg);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function showOptions() {
+      optionsEl.innerHTML = '';
+      chatbotQA.forEach(function(item, i) {
+        var btn = document.createElement('button');
+        btn.className = 'chatbot-option';
+        btn.textContent = item.q;
+        btn.onclick = function() { handleQuestion(i); };
+        optionsEl.appendChild(btn);
+      });
+      // Add horn call button
+      var hornBtn = document.createElement('button');
+      hornBtn.className = 'horn-call-btn';
+      hornBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1.01l-2.22 2.12z"/></svg> Call an Expert!';
+      hornBtn.onclick = function() { hornCall(); };
+      optionsEl.appendChild(hornBtn);
+    }
+
+    function handleQuestion(index) {
+      var qa = chatbotQA[index];
+      addMessage(qa.q, 'user');
+      optionsEl.innerHTML = '';
+      setTimeout(function() {
+        addMessage(qa.a, 'bot');
+        setTimeout(showOptions, 400);
+      }, 500);
+    }
+
+    toggle.addEventListener('click', function() {
+      win.classList.toggle('open');
+      if (win.classList.contains('open') && messagesEl.children.length === 0) {
+        addMessage("Hey! I'm the Jewel Creek bot. I can answer basic questions, but for anything specific to your property, you'll want to talk to one of our experts. What can I help with?", 'bot');
+        showOptions();
+      }
+    });
+
+    closeBtn.addEventListener('click', function() {
+      win.classList.remove('open');
+    });
+  });
+})();
+
+// --- Horn Sound Call Button ---
+(function() {
+  // Generate horn sound using Web Audio API
+  function playHornSound() {
+    var ctx = new (window.AudioContext || window.webkitAudioContext)();
+    var duration = 0.8;
+
+    // Layer 1: Main horn tone
+    var osc1 = ctx.createOscillator();
+    var gain1 = ctx.createGain();
+    osc1.type = 'sawtooth';
+    osc1.frequency.setValueAtTime(220, ctx.currentTime);
+    osc1.frequency.linearRampToValueAtTime(330, ctx.currentTime + 0.15);
+    osc1.frequency.setValueAtTime(330, ctx.currentTime + 0.15);
+    gain1.gain.setValueAtTime(0, ctx.currentTime);
+    gain1.gain.linearRampToValueAtTime(0.3, ctx.currentTime + 0.05);
+    gain1.gain.setValueAtTime(0.3, ctx.currentTime + duration - 0.15);
+    gain1.gain.linearRampToValueAtTime(0, ctx.currentTime + duration);
+    osc1.connect(gain1);
+    gain1.connect(ctx.destination);
+    osc1.start(ctx.currentTime);
+    osc1.stop(ctx.currentTime + duration);
+
+    // Layer 2: Higher harmony
+    var osc2 = ctx.createOscillator();
+    var gain2 = ctx.createGain();
+    osc2.type = 'sawtooth';
+    osc2.frequency.setValueAtTime(277, ctx.currentTime);
+    osc2.frequency.linearRampToValueAtTime(415, ctx.currentTime + 0.15);
+    gain2.gain.setValueAtTime(0, ctx.currentTime);
+    gain2.gain.linearRampToValueAtTime(0.15, ctx.currentTime + 0.05);
+    gain2.gain.setValueAtTime(0.15, ctx.currentTime + duration - 0.15);
+    gain2.gain.linearRampToValueAtTime(0, ctx.currentTime + duration);
+    osc2.connect(gain2);
+    gain2.connect(ctx.destination);
+    osc2.start(ctx.currentTime);
+    osc2.stop(ctx.currentTime + duration);
+
+    // Layer 3: Sub bass
+    var osc3 = ctx.createOscillator();
+    var gain3 = ctx.createGain();
+    osc3.type = 'sine';
+    osc3.frequency.setValueAtTime(110, ctx.currentTime);
+    osc3.frequency.linearRampToValueAtTime(165, ctx.currentTime + 0.15);
+    gain3.gain.setValueAtTime(0, ctx.currentTime);
+    gain3.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
+    gain3.gain.setValueAtTime(0.2, ctx.currentTime + duration - 0.15);
+    gain3.gain.linearRampToValueAtTime(0, ctx.currentTime + duration);
+    osc3.connect(gain3);
+    gain3.connect(ctx.destination);
+    osc3.start(ctx.currentTime);
+    osc3.stop(ctx.currentTime + duration);
+  }
+
+  window.hornCall = function() {
+    playHornSound();
+    var overlay = document.getElementById('callConfirmOverlay');
+    if (overlay) {
+      overlay.classList.add('active');
+    }
+  };
+
+  window.confirmCall = function(yes) {
+    var overlay = document.getElementById('callConfirmOverlay');
+    if (overlay) overlay.classList.remove('active');
+    if (yes) {
+      window.location.href = 'tel:7788283456';
+    }
+  };
+
+  // Close on overlay background click
+  document.addEventListener('click', function(e) {
+    if (e.target.id === 'callConfirmOverlay') {
+      e.target.classList.remove('active');
+    }
+  });
+})();

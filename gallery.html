@@ -159,6 +159,33 @@
     <button class="sticky-cta-close" aria-label="Close">&times;</button>
   </div>
 
+
+  <!-- Chatbot Widget -->
+  <button class="chatbot-toggle" id="chatbotToggle" aria-label="Chat with us">
+    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+  </button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span class="chatbot-header-title">Jewel Creek Bot</span>
+      <button class="chatbot-close" id="chatbotClose">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <div class="chatbot-options" id="chatbotOptions"></div>
+  </div>
+
+  <!-- Call Confirm Modal -->
+  <div class="call-confirm-overlay" id="callConfirmOverlay">
+    <div class="call-confirm-box">
+      <h3>Call an Expert?</h3>
+      <p>You're about to call Jewel Creek Tree Service</p>
+      <div class="confirm-number">778-828-3456</div>
+      <div class="call-confirm-buttons">
+        <button class="call-confirm-yes" onclick="confirmCall(true)">Call Now</button>
+        <button class="call-confirm-no" onclick="confirmCall(false)">Not Yet</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

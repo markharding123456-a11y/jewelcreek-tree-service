@@ -17,7 +17,22 @@
       "WebFetch(domain:share.google)",
       "WebFetch(domain:www.google.com)",
       "WebSearch",
-      "WebFetch(domain:maps.app.goo.gl)"
+      "WebFetch(domain:maps.app.goo.gl)",
+      "Bash(gh auth:*)",
+      "Bash(gh api:*)",
+      "Bash(gh repo:*)",
+      "WebFetch(domain:markharding123456-a11y.github.io)",
+      "WebFetch(domain:www.granbytree.com)",
+      "WebFetch(domain:www.skywalkertreeandirrigation.com)",
+      "WebFetch(domain:www.arborworx.ca)",
+      "WebFetch(domain:actiontreeservice.ca)",
+      "WebFetch(domain:microbetree.com)",
+      "WebFetch(domain:www.pinevalleytreeservices.ca)",
+      "WebFetch(domain:www.scottytree.ca)",
+      "WebFetch(domain:www.ggtr.ca)",
+      "WebFetch(domain:www.ninjatree.ca)",
+      "WebFetch(domain:www.twinriverstreeservice.ca)",
+      "WebFetch(domain:cuttree.co)"
     ]
   }
 }

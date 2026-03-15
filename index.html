@@ -111,7 +111,7 @@
       <div class="trust-badges">
         <div class="trust-badge">
           <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          <span>Fully Insured</span>
+          <span>$2M+ Insured</span>
         </div>
         <div class="trust-badge">
           <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
@@ -146,8 +146,8 @@
           <div class="stat-label">5-Star Reviews</div>
         </div>
         <div class="stat-item fade-in">
-          <div class="stat-number"><span data-target="100" data-suffix="%">0</span></div>
-          <div class="stat-label">Fully Insured</div>
+          <div class="stat-number"><span data-target="2" data-suffix="M+">0</span></div>
+          <div class="stat-label">Liability Coverage</div>
         </div>
       </div>
     </div>
@@ -161,7 +161,7 @@
           <h2>Skilled Tree Work You Can Trust</h2>
           <p>Jewel Creek Tree Service has been providing <span class="highlight">professional tree removal, trimming, and land clearing</span> throughout the Boundary region since 2012.</p>
           <p>From hazardous danger trees near power lines and structures to steep-terrain clearing, we have the equipment, training, and experience to handle the toughest jobs safely.</p>
-          <p><span class="highlight">Fully insured</span> for your peace of mind.</p>
+          <p><span class="highlight">$2M+ liability insured</span> for your peace of mind.</p>
           <a href="services.html" class="btn btn-outline" style="margin-top: 15px;">View Our Services</a>
         </div>
         <div class="intro-image fade-in">
@@ -348,6 +348,33 @@
     <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
     <a href="tel:7788283456" class="sticky-cta-phone">778-828-3456</a>
     <button class="sticky-cta-close" aria-label="Close">&times;</button>
+  </div>
+
+
+  <!-- Chatbot Widget -->
+  <button class="chatbot-toggle" id="chatbotToggle" aria-label="Chat with us">
+    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+  </button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span class="chatbot-header-title">Jewel Creek Bot</span>
+      <button class="chatbot-close" id="chatbotClose">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <div class="chatbot-options" id="chatbotOptions"></div>
+  </div>
+
+  <!-- Call Confirm Modal -->
+  <div class="call-confirm-overlay" id="callConfirmOverlay">
+    <div class="call-confirm-box">
+      <h3>Call an Expert?</h3>
+      <p>You're about to call Jewel Creek Tree Service</p>
+      <div class="confirm-number">778-828-3456</div>
+      <div class="call-confirm-buttons">
+        <button class="call-confirm-yes" onclick="confirmCall(true)">Call Now</button>
+        <button class="call-confirm-no" onclick="confirmCall(false)">Not Yet</button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
