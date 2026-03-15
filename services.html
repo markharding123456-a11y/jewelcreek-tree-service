@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Jewel Creek Tree Service | Boundary BC</title>
-  <meta name="description" content="Danger tree removal, trimming & pruning, and land clearing services from Jewel Creek Tree Service. Serving Christina Lake to Osoyoos, BC.">
+  <meta name="description" content="Danger tree removal, trimming & pruning, land clearing, emergency response, and wildfire prevention from Jewel Creek Tree Service. Serving Christina Lake to Osoyoos, BC.">
+  <meta property="og:title" content="Tree Services | Jewel Creek Tree Service | Boundary BC">
+  <meta property="og:description" content="Danger tree removal, trimming, land clearing, emergency response, and wildfire prevention. Fully insured since 2012.">
+  <meta property="og:image" content="images/logo.jpg">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <a href="tel:7788283456"><span class="banner-full">24/7 Emergency Tree Removal &mdash; Call </span><span class="banner-mobile">Emergency: </span><strong>778-828-3456</strong></a>
+  </div>
 
   <!-- Header -->
   <header class="site-header">
@@ -19,6 +28,8 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <a href="tel:7788283456" class="nav-phone nav-phone-desktop">
@@ -38,20 +49,22 @@
     <a href="index.html" onclick="toggleMobileMenu()">Home</a>
     <a href="services.html" onclick="toggleMobileMenu()">Services</a>
     <a href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
+    <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+    <a href="faq.html" onclick="toggleMobileMenu()">FAQ</a>
     <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
     <a href="tel:7788283456" class="mobile-phone">778-828-3456</a>
   </div>
 
   <!-- Page Header -->
-  <div class="page-header">
+  <section class="page-header" style="background-image: url('images/hero-climber.jpg')">
     <h1>Our Services</h1>
     <p>Professional tree services for the Boundary region</p>
-  </div>
+  </section>
 
   <!-- Danger Tree Removal -->
   <section class="section-dark">
     <div class="container">
-      <div class="service-detail">
+      <div class="service-detail fade-in">
         <div class="service-detail-text">
           <h2>Danger Tree Removal</h2>
           <p>When a tree threatens your home, power lines, or property, you need experienced professionals who know how to bring it down safely. Jewel Creek Tree Service specializes in technical and danger tree removal in challenging situations.</p>
@@ -63,7 +76,7 @@
             <li>Technical rigging and controlled dismantling</li>
             <li>Emergency storm response</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          <a href="services/danger-tree-removal.html" class="btn btn-primary">Learn More</a>
         </div>
         <div class="service-detail-image">
           <img src="images/hero-climber.jpg" alt="Climber performing danger tree removal near a house">
@@ -75,7 +88,7 @@
   <!-- Trimming & Pruning -->
   <section class="section-green">
     <div class="container">
-      <div class="service-detail reverse">
+      <div class="service-detail reverse fade-in">
         <div class="service-detail-text">
           <h2>Tree Trimming & Pruning</h2>
           <p>Proper pruning keeps your trees healthy, safe, and looking their best. Whether you need deadwood removed, limbs cleared from your roof, or a crown reduction to reduce wind load, we handle it all.</p>
@@ -86,7 +99,7 @@
             <li>Limbing and shaping for health and aesthetics</li>
             <li>Vista pruning and view enhancement</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          <a href="services/tree-trimming-pruning.html" class="btn btn-primary">Learn More</a>
         </div>
         <div class="service-detail-image">
           <img src="images/spar-pole-climb.jpg" alt="Arborist climbing for tree trimming work">
@@ -98,7 +111,7 @@
   <!-- Land Clearing -->
   <section class="section-dark">
     <div class="container">
-      <div class="service-detail">
+      <div class="service-detail fade-in">
         <div class="service-detail-text">
           <h2>Land Clearing</h2>
           <p>Need a lot cleared for building, a property thinned for fire protection, or brush removed for access? We provide efficient land clearing services across the Boundary region, year-round.</p>
@@ -109,10 +122,56 @@
             <li>Trail and road clearing</li>
             <li>Fire mitigation and defensible space creation</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          <a href="services/land-clearing.html" class="btn btn-primary">Learn More</a>
         </div>
         <div class="service-detail-image">
           <img src="images/hillside-clearing.jpg" alt="Land clearing on steep hillside terrain">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Tree Removal -->
+  <section class="section-green">
+    <div class="container">
+      <div class="service-detail reverse fade-in">
+        <div class="service-detail-text">
+          <h2>Emergency Tree Removal</h2>
+          <p>When a storm brings a tree down on your roof or across your driveway, you can't wait until morning. We respond 24/7 to emergency tree situations across the Boundary region.</p>
+          <ul>
+            <li>24/7 emergency response</li>
+            <li>Storm damage cleanup</li>
+            <li>Trees on structures, vehicles, and roads</li>
+            <li>Utility line clearance</li>
+            <li>Rapid assessment and safe removal</li>
+          </ul>
+          <a href="services/emergency-tree-removal.html" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="service-detail-image">
+          <img src="images/snow-crew-1.jpg" alt="Emergency tree removal crew working in winter">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wildfire Prevention -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="service-detail fade-in">
+        <div class="service-detail-text">
+          <h2>Wildfire Prevention & FireSmart</h2>
+          <p>Living in the Boundary means living with wildfire risk. We help homeowners and property managers create defensible space and reduce fuel loads to protect what matters most.</p>
+          <ul>
+            <li>FireSmart property assessments</li>
+            <li>Defensible space creation</li>
+            <li>Forest thinning and fuel reduction</li>
+            <li>Brush and ladder fuel removal</li>
+            <li>Hazard tree identification and removal</li>
+          </ul>
+          <a href="services/wildfire-prevention.html" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="service-detail-image">
+          <img src="images/forest-thinning.jpg" alt="Forest thinning for wildfire prevention">
         </div>
       </div>
     </div>
@@ -149,7 +208,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -164,6 +226,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-cta-text">Need a tree taken down?</span>
+    <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+    <a href="tel:7788283456" class="sticky-cta-phone">778-828-3456</a>
+    <button class="sticky-cta-close" aria-label="Close">&times;</button>
+  </div>
 
   <script src="script.js"></script>
 </body>

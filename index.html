@@ -19,16 +19,45 @@
     "foundingDate": "2012",
     "telephone": ["778-828-3456", "250-445-6789"],
     "email": "jewelcreektreeservice@gmail.com",
-    "areaServed": ["Christina Lake", "Grand Forks", "Greenwood", "Rock Creek", "Osoyoos"],
+    "url": "https://jewelcreektreeservice.ca",
+    "areaServed": [
+      {"@type": "City", "name": "Christina Lake"},
+      {"@type": "City", "name": "Grand Forks"},
+      {"@type": "City", "name": "Greenwood"},
+      {"@type": "City", "name": "Rock Creek"},
+      {"@type": "City", "name": "Osoyoos"}
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "BC",
       "addressCountry": "CA"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "18",
+      "bestRating": "5"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tree Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Danger Tree Removal"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tree Trimming & Pruning"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Land Clearing"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Tree Removal"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wildfire Prevention"}}
+      ]
     }
   }
   </script>
 </head>
 <body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <a href="tel:7788283456"><span class="banner-full">24/7 Emergency Tree Removal &mdash; Call </span><span class="banner-mobile">Emergency: </span><strong>778-828-3456</strong></a>
+  </div>
 
   <!-- Header -->
   <header class="site-header">
@@ -40,6 +69,8 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <a href="tel:7788283456" class="nav-phone nav-phone-desktop">
@@ -59,6 +90,8 @@
     <a href="index.html" onclick="toggleMobileMenu()">Home</a>
     <a href="services.html" onclick="toggleMobileMenu()">Services</a>
     <a href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
+    <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+    <a href="faq.html" onclick="toggleMobileMenu()">FAQ</a>
     <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
     <a href="tel:7788283456" class="mobile-phone">778-828-3456</a>
   </div>
@@ -75,6 +108,48 @@
         <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
         <a href="tel:7788283456" class="btn btn-outline">Call 778-828-3456</a>
       </div>
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>Fully Insured</span>
+        </div>
+        <div class="trust-badge">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          <span>Free Estimates</span>
+        </div>
+        <div class="trust-badge">
+          <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+          <span>14+ Years</span>
+        </div>
+        <div class="trust-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>5-Star Rated</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number"><span data-target="14" data-suffix="+">0</span></div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number"><span data-target="5.0" data-suffix="">0</span></div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number"><span data-target="18" data-suffix="">0</span></div>
+          <div class="stat-label">5-Star Reviews</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number"><span data-target="100" data-suffix="%">0</span></div>
+          <div class="stat-label">Fully Insured</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -82,14 +157,14 @@
   <section class="section-dark">
     <div class="container">
       <div class="intro-grid">
-        <div class="intro-text">
+        <div class="intro-text fade-in">
           <h2>Skilled Tree Work You Can Trust</h2>
           <p>Jewel Creek Tree Service has been providing <span class="highlight">professional tree removal, trimming, and land clearing</span> throughout the Boundary region since 2012.</p>
           <p>From hazardous danger trees near power lines and structures to steep-terrain clearing, we have the equipment, training, and experience to handle the toughest jobs safely.</p>
           <p><span class="highlight">Fully insured</span> for your peace of mind.</p>
           <a href="services.html" class="btn btn-outline" style="margin-top: 15px;">View Our Services</a>
         </div>
-        <div class="intro-image">
+        <div class="intro-image fade-in">
           <img src="images/stump-chainsaw.jpg" alt="Arborist with chainsaw on fresh-cut stump">
         </div>
       </div>
@@ -102,23 +177,23 @@
       <h2 class="section-title">What We Do</h2>
       <p class="section-subtitle">Professional tree services for every situation</p>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card fade-in">
           <svg class="icon" viewBox="0 0 64 64"><path d="M32 4L8 28h10v28h28V28h10L32 4zm-6 44V26h12v22H26z"/></svg>
           <h3>Danger Tree Removal</h3>
           <p>Hazardous, leaning, and storm-damaged trees removed safely near structures, power lines, and steep terrain.</p>
-          <a href="services.html" class="btn btn-outline">Learn More</a>
+          <a href="services/danger-tree-removal.html" class="btn btn-outline">Learn More</a>
         </div>
-        <div class="service-card">
+        <div class="service-card fade-in">
           <svg class="icon" viewBox="0 0 64 64"><path d="M32 8c-8 0-16 6-16 18s8 14 8 14v16h16V40s8-2 8-14S40 8 32 8zm-4 40h8v4h-8v-4zm0-8h8v4h-8v-4z"/></svg>
           <h3>Trimming & Pruning</h3>
           <p>Crown reduction, deadwood removal, limbing, and shaping to keep your trees healthy and your property safe.</p>
-          <a href="services.html" class="btn btn-outline">Learn More</a>
+          <a href="services/tree-trimming-pruning.html" class="btn btn-outline">Learn More</a>
         </div>
-        <div class="service-card">
+        <div class="service-card fade-in">
           <svg class="icon" viewBox="0 0 64 64"><path d="M4 52h56v4H4v-4zm6-8h8v8h-8v-8zm12-10h8v18h-8V34zm12-12h8v30h-8V22zm12-10h8v40h-8V12z"/></svg>
           <h3>Land Clearing</h3>
           <p>Lot clearing, forest thinning, and brush removal for development, fire prevention, or property improvement.</p>
-          <a href="services.html" class="btn btn-outline">Learn More</a>
+          <a href="services/land-clearing.html" class="btn btn-outline">Learn More</a>
         </div>
       </div>
     </div>
@@ -153,8 +228,7 @@
       </div>
 
       <div class="testimonials-grid">
-
-        <div class="testimonial-card">
+        <div class="testimonial-card fade-in">
           <div class="testimonial-stars">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -172,7 +246,7 @@
           </div>
         </div>
 
-        <div class="testimonial-card">
+        <div class="testimonial-card fade-in">
           <div class="testimonial-stars">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -190,7 +264,7 @@
           </div>
         </div>
 
-        <div class="testimonial-card">
+        <div class="testimonial-card fade-in">
           <div class="testimonial-stars">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -207,7 +281,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="testimonials-footer">
@@ -250,7 +323,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -265,6 +341,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-cta-text">Need a tree taken down?</span>
+    <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+    <a href="tel:7788283456" class="sticky-cta-phone">778-828-3456</a>
+    <button class="sticky-cta-close" aria-label="Close">&times;</button>
+  </div>
 
   <script src="script.js"></script>
 </body>

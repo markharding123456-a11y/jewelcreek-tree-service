@@ -86,7 +86,6 @@ document.addEventListener('keydown', function(e) {
   var fileList = document.getElementById('fileList');
   if (!uploadArea || !fileInput) return;
 
-  // Drag and drop visual feedback
   ['dragenter', 'dragover'].forEach(function(evt) {
     uploadArea.addEventListener(evt, function(e) {
       e.preventDefault();
@@ -100,7 +99,6 @@ document.addEventListener('keydown', function(e) {
     });
   });
 
-  // Handle drop
   uploadArea.addEventListener('drop', function(e) {
     var dt = new DataTransfer();
     Array.from(e.dataTransfer.files).forEach(function(f) { dt.items.add(f); });
@@ -111,7 +109,6 @@ document.addEventListener('keydown', function(e) {
     updateFileList();
   });
 
-  // Handle regular file select
   fileInput.addEventListener('change', updateFileList);
 
   function updateFileList() {
@@ -147,3 +144,111 @@ window.addEventListener('scroll', function() {
     }
   }
 });
+
+// --- Scroll-Triggered Fade-In Animations ---
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  });
+})();
+
+// --- Animated Stat Counters ---
+(function() {
+  function animateCounter(el) {
+    var target = parseFloat(el.getAttribute('data-target'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 2000;
+    var start = 0;
+    var startTime = null;
+    var isDecimal = target % 1 !== 0;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = start + (target - start) * eased;
+      el.textContent = isDecimal ? current.toFixed(1) + suffix : Math.floor(current) + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var counters = entry.target.querySelectorAll('[data-target]');
+        counters.forEach(function(counter, i) {
+          setTimeout(function() { animateCounter(counter); }, i * 200);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var statsSection = document.querySelector('.stats-section');
+    if (statsSection) observer.observe(statsSection);
+  });
+})();
+
+// --- Sticky CTA ---
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var stickyCta = document.getElementById('stickyCta');
+    var hero = document.querySelector('.hero') || document.querySelector('.page-header');
+    if (!stickyCta || !hero) return;
+
+    var dismissed = false;
+    var closeBtn = stickyCta.querySelector('.sticky-cta-close');
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        dismissed = true;
+        stickyCta.classList.add('dismissed');
+        stickyCta.classList.remove('visible');
+      });
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      if (dismissed) return;
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) {
+          stickyCta.classList.add('visible');
+        } else {
+          stickyCta.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0 });
+
+    observer.observe(hero);
+  });
+})();
+
+// --- FAQ Accordion ---
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isActive = item.classList.contains('active');
+  // Close all
+  document.querySelectorAll('.faq-item.active').forEach(function(i) {
+    i.classList.remove('active');
+  });
+  // Open clicked (if wasn't already open)
+  if (!isActive) {
+    item.classList.add('active');
+  }
+}
