@@ -324,7 +324,7 @@ function toggleFaq(el) {
     },
     {
       keywords: ['review', 'rating', 'reputation', 'google', 'recommend', 'trust', 'reliable'],
-      a: "5.0 on Google with 18 five-star reviews. We let the work speak for itself."
+      a: "5.0 on Google with 20 five-star reviews. We let the work speak for itself."
     },
     {
       keywords: ['diy', 'myself', 'own', 'chainsaw', 'self'],

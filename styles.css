@@ -1226,7 +1226,7 @@ section {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 0.8fr;
   gap: 50px;
   margin-bottom: 45px;
 }
@@ -1283,6 +1283,30 @@ section {
   color: var(--tan);
 }
 
+.footer-social h4 {
+  font-family: var(--font-heading);
+  color: var(--tan);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+}
+
+.social-links a {
+  color: var(--gray-light);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--tan);
+  transform: scale(1.15);
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 30px;
@@ -1323,6 +1347,10 @@ section {
 
   .footer-brand p {
     max-width: none;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 
   .testimonials-grid {
