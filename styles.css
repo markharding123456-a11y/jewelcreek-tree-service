@@ -1530,9 +1530,23 @@ section {
   }
 
   .nav-links,
-  .nav-phone-desktop,
-  .nav-social {
+  .nav-phone-desktop {
     display: none;
+  }
+
+  .nav-social {
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .nav-social a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-social svg {
+    width: 15px;
+    height: 15px;
   }
 
   .hamburger {
@@ -1547,8 +1561,11 @@ section {
     z-index: 999;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 130px 20px 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .mobile-menu.active {
