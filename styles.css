@@ -22,8 +22,10 @@
   --tan: #c8a96e;
   --tan-light: #dbc393;
   --tan-dark: #a8884e;
+  --gold: #c8a96e;
   --white: #ffffff;
   --off-white: #f0ede7;
+  --text-light: #f0ede7;
   --gray-light: #c5c0b8;
   --gray: #777;
   --red-accent: #8b2020;
@@ -41,6 +43,8 @@ body {
   background: var(--black);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(200, 169, 110, 0.25);
 }
 
 img {
@@ -192,6 +196,63 @@ h1, h2, h3, h4 {
   fill: var(--tan);
 }
 
+/* Header Social Icons (desktop) */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 4px;
+}
+
+.nav-social a {
+  color: var(--tan);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 169, 110, 0.35);
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.nav-social a:hover {
+  background: var(--tan);
+  color: var(--green-dark);
+  border-color: var(--tan);
+  transform: translateY(-2px);
+}
+
+.nav-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Mobile menu social row */
+.mobile-menu .social-links {
+  display: flex;
+  gap: 28px;
+  margin-top: 14px;
+}
+
+.mobile-menu .social-links a {
+  color: var(--tan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.mobile-menu .social-links a:hover {
+  color: var(--tan-light);
+}
+
+.mobile-menu .social-links svg {
+  width: 30px;
+  height: 30px;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -200,7 +261,11 @@ h1, h2, h3, h4 {
   cursor: pointer;
   background: none;
   border: none;
-  padding: 8px;
+  padding: 12px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger span {
@@ -228,6 +293,7 @@ h1, h2, h3, h4 {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,8 +427,47 @@ section {
   background: var(--dark-bg);
 }
 
+.section-light {
+  background: var(--dark-bg);
+}
+
 .section-green {
   background: var(--green-dark);
+}
+
+.section-cta {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 50%, var(--green-dark) 100%);
+  text-align: center;
+  position: relative;
+}
+
+.section-cta::before,
+.section-cta::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--tan), transparent);
+}
+
+.section-cta::before { top: 0; }
+.section-cta::after { bottom: 0; }
+
+.section-cta h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.section-cta p {
+  font-size: 1.05rem;
+  color: var(--gray-light);
+  margin-bottom: 28px;
+}
+
+.section-cta .btn {
+  margin: 0 6px 10px;
 }
 
 .section-title {
@@ -1425,7 +1530,8 @@ section {
   }
 
   .nav-links,
-  .nav-phone-desktop {
+  .nav-phone-desktop,
+  .nav-social {
     display: none;
   }
 
@@ -1436,10 +1542,7 @@ section {
   .mobile-menu {
     display: none;
     position: fixed;
-    top: 115px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(10, 46, 10, 0.98);
     z-index: 999;
     flex-direction: column;
@@ -1514,6 +1617,10 @@ section {
 
   .contact-item {
     padding: 16px;
+  }
+
+  .page-header {
+    padding: 150px 16px 50px;
   }
 }
 
@@ -1723,7 +1830,7 @@ section {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 300px;
+  max-height: 1000px;
   padding: 0 0 24px 0;
 }
 
@@ -1756,6 +1863,14 @@ section {
 .blog-card-image {
   height: 200px;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s;
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.05);
 }
 
 .blog-card-image img {
@@ -1773,7 +1888,9 @@ section {
   padding: 24px;
 }
 
-.blog-card-date {
+.blog-card-date,
+.blog-date {
+  display: block;
   font-family: var(--font-heading);
   font-size: 0.75rem;
   color: var(--tan);
@@ -1794,6 +1911,10 @@ section {
   color: var(--gray-light);
   line-height: 1.6;
   margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .blog-card-content .read-more {
@@ -1801,6 +1922,11 @@ section {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.blog-card .btn {
+  padding: 10px 24px;
+  font-size: 0.85rem;
 }
 
 /* --- Blog Post Content --- */
@@ -1897,6 +2023,40 @@ section {
 .privacy-content li {
   margin-bottom: 6px;
   line-height: 1.6;
+}
+
+/* Re-apply mobile grid overrides AFTER base rules (source-order fix) */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile blog-card sizing (source-order fix: must come after base rules above) */
+@media (max-width: 768px) {
+  .blog-card-image {
+    height: 170px;
+  }
+
+  .blog-card-content {
+    padding: 20px;
+  }
+
+  .blog-card-content h3 {
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .blog-card-content p {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+  }
 }
 
 @media (max-width: 480px) {
