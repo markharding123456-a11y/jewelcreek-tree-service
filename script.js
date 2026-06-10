@@ -6,6 +6,7 @@ function toggleMobileMenu() {
   var hamburger = document.querySelector('.hamburger');
   menu.classList.toggle('active');
   hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', menu.classList.contains('active'));
   document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
 }
 
@@ -17,6 +18,7 @@ window.addEventListener('resize', function() {
     if (menu && menu.classList.contains('active')) {
       menu.classList.remove('active');
       hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
   }
@@ -252,11 +254,14 @@ function toggleFaq(el) {
   // Close all
   document.querySelectorAll('.faq-item.active').forEach(function(i) {
     i.classList.remove('active');
+    var q = i.querySelector('.faq-question');
+    if (q) q.setAttribute('aria-expanded', 'false');
   });
   // Open clicked (if wasn't already open)
   if (!isActive) {
     item.classList.add('active');
   }
+  el.setAttribute('aria-expanded', String(!isActive));
 }
 
 // --- Chatbot ---

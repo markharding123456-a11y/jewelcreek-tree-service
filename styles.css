@@ -813,7 +813,7 @@ section {
   color: var(--tan);
 }
 
-.testimonial-author-info h4 {
+.testimonial-author-info p {
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 500;
@@ -1348,8 +1348,8 @@ section {
   line-height: 1.7;
 }
 
-.footer-links h4,
-.footer-contact h4 {
+.footer-links h3,
+.footer-contact h3 {
   color: var(--tan);
   font-size: 1rem;
   margin-bottom: 18px;
@@ -1387,7 +1387,7 @@ section {
   color: var(--tan);
 }
 
-.footer-social h4 {
+.footer-social h3 {
   font-family: var(--font-heading);
   color: var(--tan);
   font-size: 1rem;
@@ -1915,7 +1915,7 @@ section {
   margin-bottom: 10px;
 }
 
-.blog-card-content h3 {
+.blog-card-content h2 {
   font-size: 1.2rem;
   margin-bottom: 12px;
   color: var(--white);
@@ -2064,7 +2064,7 @@ section {
     padding: 20px;
   }
 
-  .blog-card-content h3 {
+  .blog-card-content h2 {
     font-size: 1.05rem;
     line-height: 1.25;
   }
@@ -2371,7 +2371,7 @@ section {
   width: 90%;
 }
 
-.call-confirm-box h3 {
+.call-confirm-box .call-confirm-title {
   font-family: var(--font-heading);
   color: var(--gold);
   font-size: 1.4rem;
