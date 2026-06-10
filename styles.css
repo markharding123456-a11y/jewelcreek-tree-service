@@ -1337,6 +1337,7 @@ section {
 
 .footer-brand img {
   height: 65px;
+  width: auto;
   margin-bottom: 18px;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
