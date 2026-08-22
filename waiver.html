@@ -221,11 +221,11 @@
           <p>This agreement is between <strong>Jewel Creek Tree Service</strong> of the Boundary region, British Columbia (the "Company"), and the person signing below (the "Client"), who confirms they are the owner of the property identified in the signing form, or are authorized by the owner to sign on the owner's behalf, for the tree work described in the signing form (the "Work") at that property (the "Property").</p>
 
           <h3>2. Acknowledgment of Inherent Risk</h3>
-          <p>The Client acknowledges that tree work &mdash; and in particular the removal of dead, dying, decayed, storm-damaged or leaning trees ("hazardous trees") &mdash; involves inherent risks that remain even when the Work is performed carefully by experienced professionals with proper equipment. These risks include, without limitation: hidden internal decay or structural weakness in the tree that cannot be detected before or during the Work; unpredictable reaction of wood under load; sudden changes in wind or weather; limited work zones close to buildings and other structures; and ground conditions affecting equipment and falling debris.</p>
+          <p>The Client acknowledges that tree work of every kind &mdash; including tree removal and felling, trimming and pruning, land clearing, stump grinding, and emergency or storm work, and in particular the removal of dead, dying, decayed, storm-damaged or leaning trees ("hazardous trees") &mdash; involves inherent risks that remain even when the Work is performed carefully by experienced professionals with proper equipment. These risks include, without limitation: hidden internal decay or structural weakness in a tree that cannot be detected before or during the Work; unpredictable reaction of wood under load; sudden changes in wind or weather; limited work zones close to buildings and other structures; falling, thrown or rigged wood and debris, including during chipping; the movement of heavy equipment and vehicles across lawns, driveways and other surfaces to reach the work area; and ground conditions affecting equipment, personnel and falling debris.</p>
           <p>The Client acknowledges that the Company has explained the specific risks of this Work, that the Client has had the opportunity to ask questions, and that the Client accepts these risks with that understanding.</p>
 
           <h3>3. Specific Risks Identified for This Job</h3>
-          <p>The risks identified for this Work may include possible damage to any of the following at or near the Property, as discussed with the Client and indicated in the signing form: the house or other buildings; driveways, walkways and other hard surfaces; vehicles, trailers and equipment; lawns, gardens and landscaping; fences and gates; and above-ground or buried utilities and services.</p>
+          <p>The risks identified for this Work may include possible damage to any of the following at or near the Property, as discussed with the Client and indicated in the signing form: the house or other buildings; driveways, walkways and other hard surfaces (including damage from equipment access); vehicles, trailers and equipment; lawns, gardens and landscaping, including trees and plants being retained; fences and gates; and above-ground or buried utilities and services.</p>
 
           <h3>4. Client Responsibilities</h3>
           <ul>
@@ -269,15 +269,20 @@
         <!-- The signing form -->
         <div class="contact-form waiver-form no-print">
           <h2>Sign Electronically</h2>
+          <p class="form-note" id="prefillNote" style="display:none">The job details below were entered by Jewel Creek Tree Service from your quote. If anything looks wrong, call us at <a href="tel:7788283456">778-828-3456</a> before signing.</p>
+          <p class="form-note" id="jobRefNote" style="display:none"></p>
           <form action="https://formsubmit.co/jewelcreektreeservice@gmail.com" method="POST" enctype="multipart/form-data" id="waiverForm">
-            <input type="hidden" name="_subject" value="SIGNED WAIVER - Jewel Creek Tree Service">
+            <input type="hidden" name="_subject" id="subjectField" value="SIGNED WAIVER - Jewel Creek Tree Service">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://jewelcreektreeservice.com/waiver-signed.html">
+            <input type="hidden" name="_autoresponse" value="Thank you - Jewel Creek Tree Service has received your signed pre-work acknowledgment and waiver, and a time-stamped copy has been recorded. If you have any questions before the job, call us at 778-828-3456.">
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <input type="hidden" name="waiver_version" value="v1.0 - August 2026">
             <input type="hidden" name="signed_at" id="signedAt" value="">
             <input type="hidden" name="device" id="deviceField" value="">
+            <input type="hidden" name="job_ref" id="jobRefField" value="">
+            <input type="hidden" name="prefilled_by_link" id="prefilledField" value="no">
 
             <div class="form-group">
               <label for="client_name">Full legal name</label>
@@ -302,10 +307,11 @@
 
             <fieldset class="risk-set">
               <legend>Risks discussed for this job</legend>
-              <p class="form-note">Tick everything that was identified when the job was assessed (check all that apply):</p>
+              <p class="form-note" id="riskTickNote">Tick everything that was identified when the job was assessed (check all that apply):</p>
+              <p class="form-note" id="riskLockNote" style="display:none">These risks were identified by Jewel Creek Tree Service when the job was assessed and can't be changed here &mdash; call us if something is missing.</p>
               <div class="check-group risk-grid">
                 <label><input type="checkbox" name="risk_house_buildings" value="yes"> Possible damage to the house or other buildings</label>
-                <label><input type="checkbox" name="risk_driveway_surfaces" value="yes"> Possible damage to the driveway, walkways or other hard surfaces</label>
+                <label><input type="checkbox" name="risk_driveway_surfaces" value="yes"> Possible damage to the driveway, walkways or other surfaces (including from equipment access)</label>
                 <label><input type="checkbox" name="risk_vehicles" value="yes"> Possible damage to vehicles, trailers or equipment left in the area</label>
                 <label><input type="checkbox" name="risk_landscaping" value="yes"> Possible damage to lawns, gardens or landscaping</label>
                 <label><input type="checkbox" name="risk_fences_utilities" value="yes"> Possible damage to fences, gates, or utilities and services</label>
@@ -422,6 +428,58 @@
     // Default the date field to today (local)
     var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
     document.getElementById('sign_date').value = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+
+    // Prefill from an office-generated link: ?n=name&a=address&j=job&r=risk,keys&ref=jobref
+    // Job details on office links come from the company, so those fields lock.
+    var q = new URLSearchParams(location.search);
+    var riskMap = {
+      house: 'risk_house_buildings',
+      driveway: 'risk_driveway_surfaces',
+      vehicles: 'risk_vehicles',
+      landscaping: 'risk_landscaping',
+      utilities: 'risk_fences_utilities'
+    };
+    function lockField(el) {
+      el.readOnly = true;
+      el.setAttribute('aria-readonly', 'true');
+      el.style.opacity = '0.85';
+    }
+    var prefilled = false;
+    if (q.get('n')) { document.getElementById('client_name').value = q.get('n'); prefilled = true; }
+    if (q.get('a')) { var pa = document.getElementById('property_address'); pa.value = q.get('a'); lockField(pa); prefilled = true; }
+    if (q.get('j')) { var wd = document.getElementById('work_description'); wd.value = q.get('j'); lockField(wd); prefilled = true; }
+    if (q.get('r') !== null) {
+      prefilled = true;
+      q.get('r').split(',').forEach(function (k) {
+        var name = riskMap[k.trim()];
+        if (!name) return;
+        var box = document.querySelector('input[name="' + name + '"]');
+        if (box) box.checked = true;
+      });
+      Object.keys(riskMap).forEach(function (k) {
+        var box = document.querySelector('input[name="' + riskMap[k] + '"]');
+        if (box) box.addEventListener('click', function (e) { e.preventDefault(); });
+      });
+      document.getElementById('riskTickNote').style.display = 'none';
+      document.getElementById('riskLockNote').style.display = 'block';
+    }
+    if (q.get('ref')) {
+      document.getElementById('jobRefField').value = q.get('ref');
+      var rn = document.getElementById('jobRefNote');
+      rn.textContent = 'Job reference: ' + q.get('ref');
+      rn.style.display = 'block';
+    }
+    if (prefilled) {
+      document.getElementById('prefilledField').value = 'yes';
+      document.getElementById('prefillNote').style.display = 'block';
+    }
+
+    // Subject line of the recorded email identifies the client and property
+    document.getElementById('waiverForm').addEventListener('submit', function () {
+      var nm = document.getElementById('client_name').value.trim();
+      var ad = document.getElementById('property_address').value.trim();
+      document.getElementById('subjectField').value = 'SIGNED WAIVER - ' + nm + ' - ' + ad;
+    });
 
     // Optional drawn signature: canvas pad, attached to the form as a PNG when supported
     var canvas = document.getElementById('sigPad');

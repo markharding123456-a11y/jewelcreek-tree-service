@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /waiver-send.html
 
 Sitemap: https://jewelcreektreeservice.com/sitemap.xml
