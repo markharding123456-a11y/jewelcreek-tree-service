@@ -268,6 +268,10 @@ function toggleFaq(el) {
 (function() {
   var chatbotKB = [
     {
+      keywords: ['what tree', 'which tree', 'what kind of tree', 'what type of tree', 'identify', 'identification', 'species', 'what is this tree', 'name of', 'tree id'],
+      a: "Try our free photo identifier: jewelcreektreeservice.com/tree-id.html - snap the bark, the needles or leaves, and the whole tree, and it'll tell you the species and how sure it is. Runs right on your phone. If it isn't sure, email your photos to jewelcreektreeservice@gmail.com and we'll tell you."
+    },
+    {
       keywords: ['service', 'offer', 'do you do', 'what do you', 'help with'],
       a: "We do danger tree removal, trimming & pruning, land clearing, 24/7 emergency removal, and wildfire prevention & FireSmart work. What are you dealing with?"
     },
@@ -367,7 +371,8 @@ function toggleFaq(el) {
     "Do you handle emergencies?",
     "What areas do you serve?",
     "Are you insured?",
-    "How do I get a quote?"
+    "How do I get a quote?",
+    'What tree is this?'
   ];
 
   function findAnswer(input) {

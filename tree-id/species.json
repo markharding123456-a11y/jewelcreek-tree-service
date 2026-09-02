@@ -1,0 +1,851 @@
+{
+ "lodgepole_pine": {
+  "key": "lodgepole_pine",
+  "common_name": "Lodgepole pine",
+  "latin_name": "Pinus contorta var. latifolia",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Needles in pairs, 3–7 cm, often twisted, yellow-green to dark green; the only two-needle pine native here.",
+   "Bark thin, scaly and flaky, orange-brown to grey, in small plates — never ponderosa's big jigsaw slabs.",
+   "Small egg-shaped cones, 3–6 cm, with prickly scales; often lopsided, and many stay on the branches for years.",
+   "Tall, narrow, straight trunk with a short crown; in dense stands the lower trunk is bare of branches.",
+   "Open-grown yard trees are bushier, keeping lower branches and a rounder top."
+  ],
+  "size": "Usually 20–30 m tall here, occasionally taller on good sites; trunks are slender for the height, often 30–60 cm across.",
+  "lifespan": "Commonly 100–200 years; some reach 300 or more, but fire and beetles end many stands well before that.",
+  "in_the_boundary": "Mostly on the higher, cooler slopes and plateaus above the ponderosa and Douglas-fir belt, often in dense even-aged stands that seeded in after old fires. More common toward Christina Lake and the hills around Greenwood and Rock Creek, and on acreages more than in town yards.",
+  "common_problems": [
+   "Mountain pine beetle: its main host. Attacked trees fade from green to red to grey over a year or two.",
+   "Shallow roots and a slender trunk: prone to windthrow and snow breakage, especially once neighbouring trees are removed.",
+   "Dwarf mistletoe: dense witches' brooms that sap vigour and deform the crown; spreads from tree to tree.",
+   "Drought stress after recent dry years: thinning, yellowing crowns and less resin to fend off beetles."
+  ],
+  "firesmart": "A conifer, so FireSmart BC treats it as high-hazard near buildings: thin bark, resinous needles and dead lower limbs carry fire fast, especially in dense stands. Guidance favours no conifers within 10 m of a home, and spaced, limbed-up trees beyond that.",
+  "watch_for": [
+   "Popcorn-like pitch blobs or reddish boring dust on the trunk, or a crown turning red — worth a beetle check.",
+   "A lean that has changed, cracked or heaved soil at the base, or a tree newly exposed after neighbours came down.",
+   "Big dead limbs, heavy witches' brooms, or a top that has thinned or died back over a summer or two."
+  ],
+  "lookalikes": [
+   "Ponderosa pine: needles in threes and much longer (12–25 cm), with big orange jigsaw-plate bark.",
+   "Scots pine (planted in yards): also two needles, but bluish, with bright orange bark high on the trunk.",
+   "Western white pine: five needles per bundle and long, banana-shaped cones; found toward Christina Lake."
+  ],
+  "fun_fact": "Its straight, slim poles were the traditional tipi and lodge poles that give it its name. Many cones stay sealed with resin for years and pop open in a wildfire's heat, so a burnt stand reseeds itself into thick \"dog-hair\" thickets."
+ },
+ "ponderosa_pine": {
+  "key": "ponderosa_pine",
+  "common_name": "Ponderosa pine",
+  "latin_name": "Pinus ponderosa",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Needles long (12–25 cm), in bundles of three, tufted like bottle-brushes at the branch tips.",
+   "Mature bark orange-brown to cinnamon in large flat 'puzzle-piece' plates; young trees are dark grey-black.",
+   "Cones egg-shaped, 8–15 cm, each scale tipped with a sharp outward prickle — they bite when you pick them up.",
+   "Tall straight trunk, bare of lower limbs, under an open, rounded crown.",
+   "Bark crevices smell of vanilla or butterscotch in warm sun."
+  ],
+  "size": "Commonly 25–40 m tall here, sometimes taller on good sites. Trunks often 60–100 cm across, with old veterans well over a metre.",
+  "lifespan": "Long-lived — 300 to 500 years is typical for a mature tree, and some pass 600.",
+  "in_the_boundary": "The signature tree of the dry valley bottoms and south-facing benches around Grand Forks, Rock Creek, Greenwood and Osoyoos — open, park-like stands with bunchgrass beneath. Thins out on the moister Christina Lake side. Many yard ponderosas are original forest trees kept when the lot was cleared.",
+  "common_problems": [
+   "Bark beetles (mountain pine, western pine, Ips) hit drought-stressed trees; first signs are pitch tubes and fading crowns.",
+   "Drought stress after recent dry years: thinning crowns, short new needles, top dieback, and browning that starts at the tips.",
+   "Western dwarf mistletoe: dense witches'-brooms and swollen branches that slowly sap vigour.",
+   "Big heavy limbs can shed in wet spring snow or summer storms, especially on open-grown yard trees."
+  ],
+  "firesmart": "A conifer, so FireSmart BC guidance treats it as high hazard within 10 m of a home. Long needles pile up on roofs and gutters. Thick bark handles ground fire well, but low limbs can ladder flames into the crown — worth a conversation about pruning and spacing.",
+  "watch_for": [
+   "Pitch tubes on the trunk, reddish boring dust in bark crevices, or a crown fading yellow to rust-red.",
+   "Browning that starts at branch tips or a thin, dying top (inner needles yellowing in September is normal shed).",
+   "Large dead limbs over the house or driveway, or mushrooms and conks at the base."
+  ],
+  "lookalikes": [
+   "Lodgepole pine: much shorter needles (3–7 cm) in pairs, thin dark scaly bark, no orange plates.",
+   "Western white pine: soft blue-green needles in fives, long slender cones without prickles.",
+   "Scots pine (planted yards): short twisted needles in pairs, orange flaky bark only on the upper trunk."
+  ],
+  "fun_fact": "Ponderosa pine's entire natural range ends in BC's interior — nowhere on Earth does it grow farther north. Foresters call young dark-barked trees 'blackjacks'; the orange puzzle-plates only show after decades."
+ },
+ "western_white_pine": {
+  "key": "western_white_pine",
+  "common_name": "Western white pine",
+  "latin_name": "Pinus monticola",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Needles in bundles of five, soft and flexible, blue-green with fine white lines, 5–10 cm long.",
+   "Cones long and slender, 15–25 cm, often banana-curved, hanging from upper branch tips and sticky with resin.",
+   "Young bark smooth silvery grey; old trunks dark grey, broken into small squarish plates like a chequerboard.",
+   "Tall, straight trunk with a narrow crown; branches in tidy whorls give a layered, open look.",
+   "Fallen cones underneath are the giveaway — nothing else local drops cones this long."
+  ],
+  "size": "Typically 30–45 m tall at maturity in the interior, occasionally taller; trunks commonly 60–100 cm across, over a metre on old giants. Yard trees usually top out around 15–25 m.",
+  "lifespan": "Commonly 300–400 years, with a few reaching 500 or more. Locally, blister rust cuts most trees well short of that.",
+  "in_the_boundary": "Scattered through the moister mixed forests toward Christina Lake and on cooler north-facing slopes and higher benches; uncommon on the hot dry ponderosa benches around Grand Forks, Rock Creek and Osoyoos. Occasionally planted in town. Big old specimens are rare because blister rust has taken most of them.",
+  "common_problems": [
+   "White pine blister rust: an introduced fungus that kills branches, then girdles the trunk — why big ones are scarce.",
+   "Mountain pine beetle attacks white pine too; pitch tubes and a crown fading yellow to red.",
+   "Drought stress on dry sites, worse after recent dry years, thins crowns and lowers defences against beetles and rust.",
+   "Armillaria root disease is common in interior mixed forests and can weaken roots with little sign above ground."
+  ],
+  "firesmart": "A conifer, so FireSmart BC treats it as high hazard near buildings: resinous needles and litter, flammable low limbs. Ideally none within 10 m of the house; farther out, prune lower branches to about 2 m and keep needles off roofs and gutters.",
+  "watch_for": [
+   "Scattered dead branches with rusty red needles, or a dead top — classic blister rust flagging, worth a look.",
+   "Sunken or swollen patches on trunk or limbs weeping resin, or orange-yellow blisters on the bark in spring.",
+   "Small pitch tubes, reddish boring dust in bark crevices, or the whole crown fading over one season."
+  ],
+  "lookalikes": [
+   "Lodgepole and ponderosa pine: count needles per bundle — two (lodgepole) or three (ponderosa), never five.",
+   "Whitebark pine: also five needles, but a high-elevation tree with short egg-shaped cones that stay closed.",
+   "Planted eastern white pine in yards: near-identical; its cones are generally shorter and straighter."
+  ],
+  "fun_fact": "Blister rust can't spread pine to pine — it needs wild currant or gooseberry bushes as a go-between, which is why crews once spent decades ripping out every Ribes bush they could find."
+ },
+ "douglas_fir": {
+  "key": "douglas_fir",
+  "common_name": "Douglas-fir",
+  "latin_name": "Pseudotsuga menziesii",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Soft, flat needles 2–3 cm long, set singly all around the twig; crushed, they smell sweet and citrusy.",
+   "Hanging cones 5–8 cm with three-pointed bracts poking out between the scales — the 'mouse tail' giveaway.",
+   "Buds are sharp-pointed, reddish-brown and papery — unlike the blunt, resin-covered buds of true firs.",
+   "Bark smooth and grey with resin blisters when young; thick, corky and deeply furrowed on old trees.",
+   "Straight single trunk, conical crown, side branchlets that droop; interior trees are compact with bluish-green needles."
+  ],
+  "size": "Interior Douglas-fir commonly reaches 25–45 m here, with trunks 0.5–1 m across; old trees on good sites grow larger. Yard specimens are usually smaller.",
+  "lifespan": "Commonly 300–500 years in the interior; some old-growth trees are older.",
+  "in_the_boundary": "A backbone of the valley-slope forests from Rock Creek to Grand Forks, mixed with ponderosa pine and western larch; denser and taller on north slopes and toward Christina Lake. Often kept as a shade or edge tree on rural lots, and planted in town yards.",
+  "common_problems": [
+   "Douglas-fir beetle, which favours drought-stressed, windthrown or fire-scorched trees; look for pitch streams and reddish boring dust.",
+   "Drought stress after recent dry summers: thinning crowns, faded needles and dead tops, especially on shallow or rocky soils.",
+   "Root diseases such as Armillaria and laminated root rot, which rot the roots out of sight beneath a green crown.",
+   "Dwarf mistletoe brooms and western spruce budworm feeding, both of which thin and weaken the crown over the years."
+  ],
+  "firesmart": "A conifer: FireSmart BC rates it high-hazard within 10 m of a home, since resinous needles, litter and low branches carry ground fire upward. Thick bark helps mature trees survive wildfire; it does nothing for your house. Spacing, limbing up and clearing needle litter are standard FireSmart steps.",
+  "watch_for": [
+   "Pitch streams or reddish boring dust on the trunk, or a crown fading from green to yellow to red.",
+   "Mushrooms or conks at the base, a new lean, or lifted soil on one side of the trunk.",
+   "A dead top or large dead limbs hanging over the roof, driveway, or power lines — worth a free look."
+  ],
+  "lookalikes": [
+   "True firs (grand, subalpine): their cones stand upright on top branches and fall apart; Douglas-fir cones hang and drop whole.",
+   "Spruce: needles are stiff, sharp and four-sided, rolling between your fingers; Douglas-fir needles are flat and soft.",
+   "Western larch: needles grow in tufts and turn gold and drop each autumn; Douglas-fir stays green all year."
+  ],
+  "fun_fact": "It isn't a true fir at all — Pseudotsuga means 'false hemlock', and botanists reclassified it several times before settling. Look under a cone scale: the three-pointed bract looks like the hind legs and tail of a mouse diving for cover."
+ },
+ "grand_fir": {
+  "key": "grand_fir",
+  "common_name": "Grand fir",
+  "latin_name": "Abies grandis",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Flat, glossy dark-green needles with two white stripes beneath, combed out in two rows along the twig; tips notched.",
+   "Crushed needles smell like tangerine or citrus — a quick tell in the hand.",
+   "Young bark smooth grey with resin blisters; old trunks greyish-brown and furrowed into flat plates.",
+   "Cones stand upright on top branches, green to purplish, and fall apart on the tree — you rarely find whole ones.",
+   "Tall, straight trunk with a narrow crown that goes flat or ragged on older trees."
+  ],
+  "size": "Commonly 30–45 m tall in the Interior, occasionally taller on rich, moist sites; trunks up to about 1 m across.",
+  "lifespan": "Typically 200–300 years, though heart rot often cuts that shorter on Interior sites.",
+  "in_the_boundary": "Native to moister, cooler ground — valley bottoms, north-facing slopes and the mixed cedar-hemlock forest toward Christina Lake — usually growing alongside Douglas-fir, larch and cedar. Scarce on the hot ponderosa benches. Also turns up in older yards and acreages, occasionally as a volunteer seedling.",
+  "common_problems": [
+   "Heart rot, especially Indian paint fungus — a hollow or punky trunk can hide behind a healthy-looking crown.",
+   "Root rots (Armillaria, laminated root rot) that spread tree-to-tree through the soil and loosen anchorage.",
+   "Fir engraver beetle moves in on drought-stressed trees; recent dry years have left many stressed.",
+   "Relatively weak wood — tops and limbs can snap in wind or wet snow, especially where rot has set in."
+  ],
+  "firesmart": "Like all conifers, grand fir sits in FireSmart BC's higher-hazard group: resinous needles, dense low branches and shed litter carry fire readily. Guidance is to keep conifers out of the 10 m zone around buildings, prune low limbs, and clear needles from roofs and gutters.",
+  "watch_for": [
+   "Shelf fungus (conks) on the trunk, or clusters of honey-coloured mushrooms at the base in autumn — worth an arborist's look.",
+   "Crown thinning or reddening from the top down, or pitch and fine boring dust on the bark — worth a call.",
+   "A new lean, heaved soil at the base, or a dead top over a house, driveway or power line."
+  ],
+  "lookalikes": [
+   "Douglas-fir — its cones hang down with three-pronged bracts and its buds are pointed; grand fir cones stand upright and crumble.",
+   "Subalpine fir — needles curve upward all around the twig, crown is a narrow spire; mostly higher up the mountains.",
+   "Western hemlock — drooping leader and short needles of uneven length; grand fir's leader stands straight."
+  ],
+  "fun_fact": "The name fits — grand fir is the tallest of the true firs. Its citrus-scented foliage makes it a popular Christmas tree, and Interior trees sometimes carry white fir genes from further south, which is why some look bluer than their neighbours."
+ },
+ "subalpine_fir": {
+  "key": "subalpine_fir",
+  "common_name": "Subalpine fir",
+  "latin_name": "Abies lasiocarpa",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Needles flat, soft, blunt-tipped, 2–4 cm, blue-green with whitish lines on both sides; many curve upward on the twig.",
+   "Twigs are smooth after needles drop (round scars), unlike the rough pegs left on spruce.",
+   "Bark smooth grey with resin blisters when young; greyer and shallowly furrowed or scaly on old trunks.",
+   "Cones stand upright on the top branches, purple, 5–10 cm, and break apart on the tree by autumn.",
+   "Very narrow, spire-like crown with short stiff branches, often keeping foliage right to the ground."
+  ],
+  "size": "Usually 20–35 m tall in the interior, occasionally taller; trunks commonly 30–60 cm across. Near treeline it shrinks to a stunted, shrubby form.",
+  "lifespan": "Typically 150–250 years in the mountains, occasionally past 300. Yard trees at valley elevations rarely last nearly that long.",
+  "in_the_boundary": "A high-elevation tree here. Mixed with Engelmann spruce on the cool upper slopes and ridgetops above the Douglas-fir and larch belt, more so toward Christina Lake and the Monashees. Occasionally planted in town yards, where valley heat is hard on it.",
+  "common_problems": [
+   "Western balsam bark beetle: the main killer of mature subalpine fir in BC; crowns fade red over a season or two.",
+   "Heart rot and root rot (Indian paint fungus, Armillaria) are common in older trees and hard to see from outside.",
+   "Shallow roots and a tall narrow crown make it prone to windthrow, especially once neighbouring trees are removed.",
+   "Yard-planted trees at valley elevations often struggle with summer heat and drought; needles brown and thin out."
+  ],
+  "firesmart": "A conifer with resinous needles and branches often right down to the ground, so it acts as a ladder fuel. FireSmart BC rates conifers high hazard near buildings: keep them out of the 10 m zone around the house and prune low limbs.",
+  "watch_for": [
+   "A crown turning reddish-brown, pitch blobs or fine boring dust on the trunk — worth having an arborist look.",
+   "Shelf fungi (conks) on the trunk, or a hollow sound when tapped — a reason to call for a look.",
+   "A new lean or lifted soil at the base after wind, or a tall one beside the house — worth a call."
+  ],
+  "lookalikes": [
+   "Grand fir: needles spread flat in two rows, glossy green on top, broader crown, found at lower elevations.",
+   "Engelmann spruce: needles sharp, four-sided, roll between fingers; cones hang down; twigs rough with pegs.",
+   "Douglas-fir: hanging cones with three-pronged bracts, sharp pointed buds; needles spread all round the twig."
+  ],
+  "fun_fact": "Its cones never fall whole. They break apart on the branch in autumn, scattering scales and seeds and leaving a bare upright spike behind — so look up, not down, to find them."
+ },
+ "western_larch": {
+  "key": "western_larch",
+  "common_name": "Western larch",
+  "latin_name": "Larix occidentalis",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Soft, light-green needles 2–5 cm long in tufts of 15–30 on short spur twigs; single along new shoots.",
+   "Turns brilliant gold in October and drops every needle — bare all winter, unlike any other local conifer.",
+   "Mature bark thick, cinnamon-brown to grey, in flaky plates with deep furrows, easily mistaken for ponderosa pine.",
+   "Small cones 2–4 cm with slender pointed bracts poking out past the scales; they hang on well after opening.",
+   "Very tall, straight trunk with a narrow, open crown of short branches; often the tallest tree on the slope."
+  ],
+  "size": "Typically 30–50 m tall at maturity, with the largest old trees approaching 60 m. Trunks are commonly around 1 m across on old trees, occasionally 1.5 m, and stay straight and branch-free for much of their height.",
+  "lifespan": "Long-lived: 300–600 years is common for old-growth trees, and some have been aged past 700. Yard-planted trees are rarely more than a few decades old and are still growing fast.",
+  "in_the_boundary": "Common on mid-elevation and north-facing slopes across the Boundary, mixed with Douglas-fir and ponderosa pine, and thickest toward Christina Lake and the wetter valleys. It seeds in after fire and logging. Also planted in yards and along rural driveways; big old ones stand on many acreages.",
+  "common_problems": [
+   "Larch dwarf mistletoe: dense witches' brooms, weak tops and slow decline; very common in Boundary stands.",
+   "Larch casebearer and needle blights brown the new spring needles; mostly cosmetic, but repeat years add stress.",
+   "Drought stress on hot, south-facing yard sites — larch prefers cooler, moister ground than pine.",
+   "Heart rot and conks in old trees, especially around fire scars and cat-faces at the base."
+  ],
+  "firesmart": "It is still a conifer, so FireSmart BC treats it as a higher-hazard tree within 10 m of a home than deciduous species. That said, its thick bark, high open crown and low-resin needles make it one of the more fire-tolerant conifers. Clear the autumn needle drop from roofs and gutters.",
+  "watch_for": [
+   "Big witches' brooms or a dying top on a tall larch standing over a house, driveway or power line — worth a look.",
+   "Shelf fungi (conks) on the trunk, or a hollow-sounding, fire-scarred base on an old giant.",
+   "A larch that has not greened up by late May, or one dropping needles in midsummer instead of October."
+  ],
+  "lookalikes": [
+   "Ponderosa pine — same plated orange bark, but long evergreen needles in bundles of three; larch needles are short, soft, tufted.",
+   "Douglas-fir — evergreen with single flat needles and bigger cones bearing three-pointed 'mouse-tail' bracts.",
+   "A dead conifer — a bare winter larch is often mistaken for one; look for knobby spur buds and the golden needle litter below."
+  ],
+  "fun_fact": "Western larch is the largest larch in the world and one of very few conifers that drops its needles each autumn — those golden hillsides above Christina Lake in October are larch. Its dense wood is also the region's most prized firewood, burning hot and slow."
+ },
+ "spruce": {
+  "key": "spruce",
+  "common_name": "Spruce (Engelmann / white)",
+  "latin_name": "Picea engelmannii, Picea glauca and their hybrids",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Single needles, stiff and sharp, four-sided so they roll between your fingers; green to blue-green.",
+   "Needles sit on tiny woody pegs; bare twigs feel rough and bumpy where old needles dropped.",
+   "Cones hang down, 3–7 cm, with thin papery scales; Engelmann's scale tips look ragged, white spruce's smooth.",
+   "Bark thin and scaly, grey-brown to reddish, flaking in small plates; not deeply furrowed like old Douglas-fir.",
+   "Narrow, spire-like crown; open-grown trees keep branches right to the ground. Crushed needles smell sharp, sometimes skunky."
+  ],
+  "size": "Forest trees commonly 20–40 m, occasionally taller, trunks up to about 1 m across. Yard trees usually 15–25 m.",
+  "lifespan": "Commonly 200–400 years in the wild, with Engelmann sometimes older; planted yard trees typically far less.",
+  "in_the_boundary": "Interior spruce here is a blend of Engelmann, white and their hybrids — near-impossible to separate from a photo, and it hardly matters for care. Native to moister ground: Christina Lake, creek bottoms, north slopes and higher elevations. Widely planted as a yard tree in every Boundary town.",
+  "common_problems": [
+   "Drought stress in hot, dry yards: a moisture-loving tree thins and browns from the inside out, often with spider mites.",
+   "Spruce beetle attacks stressed or freshly downed trees and can spread to healthy neighbours.",
+   "Root rot (tomentosus and Armillaria) is common in interior spruce, often hidden until the crown thins or the tree leans.",
+   "Shallow root plates make windthrow more likely on wet soils or once neighbouring trees are cleared away."
+  ],
+  "firesmart": "High hazard. FireSmart BC treats all conifers as flammable, and spruce rates among the worst because dense, resinous branches reach the ground and act as ladder fuel. Keep conifers out of the 10 m zone around buildings; prune low limbs and space crowns beyond that.",
+  "watch_for": [
+   "Browning or thinning that starts at the top, or a whole tree going dull green to red over one summer.",
+   "Reddish boring dust, pitch blobs on the trunk, or woodpeckers working the bark — worth a look for beetles.",
+   "A new lean, soil lifting on one side of the base, or mushrooms and conks around the roots."
+  ],
+  "lookalikes": [
+   "Douglas-fir: soft, flat needles you can't roll, and cones with three-pronged bracts poking out.",
+   "Subalpine fir: flat, blunt needles, smooth grey bark with resin blisters, and cones that stand upright.",
+   "Colorado blue spruce (planted): the same peg-and-needle build, but longer, stiffer, strongly silver-blue needles."
+  ],
+  "fun_fact": "Engelmann spruce is prized for guitar and piano soundboards — its light, even-grained wood carries sound beautifully. White spruce earned the nickname 'skunk spruce' for the smell of its crushed needles."
+ },
+ "western_redcedar": {
+  "key": "western_redcedar",
+  "common_name": "Western redcedar",
+  "latin_name": "Thuja plicata",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Flat, fern-like sprays of tiny scale leaves, glossy green above with white butterfly-shaped marks beneath.",
+   "Crushed foliage smells sweet and fruity, almost like pineapple.",
+   "Bark thin, fibrous, reddish-brown ageing to grey, peeling in long vertical strips.",
+   "Cones tiny (about 1 cm), egg-shaped, upright in clusters near branch tips; branch tips droop then curve up.",
+   "Dense conical crown; trunk flares widely and often flutes at the base, older trees may have dead spike tops."
+  ],
+  "size": "Typically 20–40 m tall locally, taller on wet interior sites; old trunks 1–2 m across, wider still at the flared base.",
+  "lifespan": "Several hundred years is normal; 500-plus on good sites, and the oldest known coastal trees exceed 1,000 years.",
+  "in_the_boundary": "Native here but choosy: it lives where the ground stays moist — creek bottoms, seepage sites, shaded north slopes, and the wetter mixed forest around Christina Lake. Rare on dry ponderosa slopes. Around town it is a common planted specimen and hedge tree, usually surviving on irrigation.",
+  "common_problems": [
+   "Drought stress on hot, dry sites: browning tips, thinning crown, dead patches — noticeably worse after the recent dry years.",
+   "Heart rot and butt rot are common in older trunks; the inside can be hollow with little showing outside.",
+   "Shallow, wide root plate: waterlogged soil, root cuts from digging, or wind can shift big trees.",
+   "Cedar bark beetles go after stressed trees; note the inner-foliage browning each autumn ('flagging') is normal."
+  ],
+  "firesmart": "A conifer, so FireSmart BC treats it as high hazard near buildings: the stringy bark and dense, oily foliage catch fire easily. Guidance is no conifers within 10 m of a home. Cedar hedges planted tight against siding are a common thing worth having looked at.",
+  "watch_for": [
+   "A browning or dead top, or whole limbs browning in summer rather than the usual inner autumn flagging.",
+   "Soft or hollow-sounding wood, fungus, or a widening cavity at the base between the root flares.",
+   "A lean that has changed, lifted soil on one side, or several heavy tops hanging over a roof."
+  ],
+  "lookalikes": [
+   "Eastern white cedar hedging ('Emerald', 'Brandon'): smaller and denser, duller sprays without the white marks underneath.",
+   "Rocky Mountain juniper: scaly foliage too, but sprays are rounded rather than flat and cones are blue berries.",
+   "Yellow-cedar: weeping, hanging sprays and rounder cones; mostly high elevation, seldom seen around Boundary towns."
+  ],
+  "fun_fact": "It is BC's official provincial tree. Its rot-resistant wood and stringy bark gave First Nations canoes, houses, baskets, clothing and rope, earning it the name \"tree of life\". Old cedar fence posts and shakes can outlast the people who split them."
+ },
+ "western_hemlock": {
+  "key": "western_hemlock",
+  "common_name": "Western hemlock",
+  "latin_name": "Tsuga heterophylla",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Short, flat, blunt needles of uneven lengths (5–20 mm), glossy green above with two white lines beneath.",
+   "The top leader droops over like a fishing rod — the quickest tell from a distance.",
+   "Cones are tiny, 2–3 cm, oval and papery, hanging in numbers from the branch tips.",
+   "Bark thin and reddish-brown, turning greyer and scaly-furrowed on older trunks.",
+   "Feathery, downswept branch tips and a narrow crown; young trees often grow up in deep shade."
+  ],
+  "size": "Usually 20–40 m tall in the interior, with trunks 0.5–1 m across; coastal trees grow considerably larger.",
+  "lifespan": "Commonly 200–400 years; some trees reach 500 or more.",
+  "in_the_boundary": "Mostly in the moister mixed forest toward Christina Lake and on cool, shaded, north-facing slopes, often alongside western redcedar. Uncommon on the hot dry benches around Grand Forks, Greenwood, Rock Creek and Osoyoos, and rarely planted in yards.",
+  "common_problems": [
+   "Shallow roots and thin bark make it a poor fit for hot, dry, exposed sites; drought years bring top dieback.",
+   "Heart rot is common in older interior hemlock, often signalled by hoof-shaped Indian paint fungus conks on the trunk.",
+   "Hemlock dwarf mistletoe causes dense witches' brooms, thinning crowns and brittle, heavy limbs.",
+   "A shallow root plate means windthrow on saturated or disturbed ground, especially after neighbouring trees are removed."
+  ],
+  "firesmart": "A conifer with thin bark, dense needles and low feathery branches — FireSmart BC treats conifers as high hazard within 10 m of a home. Keep them out of the immediate zone, prune lower limbs and clear needle litter from roofs and gutters.",
+  "watch_for": [
+   "Shelf-like conks on the trunk, or a hollow sound when knocked — worth having an arborist look.",
+   "Clumps of dense, tangled growth (witches' brooms) with a thinning, yellowing crown above them.",
+   "A new lean, lifted soil at the base, or a dead brown top — reasons to call for a look."
+  ],
+  "lookalikes": [
+   "Mountain hemlock: needles the same length all around the twig, bluish; bigger cones (3–6 cm); higher elevations.",
+   "Douglas-fir: stiffer, pointed needles all one length, an upright leader, and cones with three-pronged bracts.",
+   "Grand or subalpine fir: longer, uniform needles and upright cones on the top branches; no drooping leader."
+  ],
+  "fun_fact": "It's Washington State's official tree and one of BC's most shade-tolerant conifers — seedlings can sit under a dark canopy for decades, often rooted on a rotting \"nurse log\", waiting for a gap of light."
+ },
+ "rocky_mountain_juniper": {
+  "key": "rocky_mountain_juniper",
+  "common_name": "Rocky Mountain juniper",
+  "latin_name": "Juniperus scopulorum",
+  "type": "conifer",
+  "native": true,
+  "recognize": [
+   "Tiny scale-like leaves pressed flat against the twig, grey-green to blue-green; young shoots can be prickly and awl-shaped.",
+   "Reddish-brown to grey bark that shreds in long, thin, fibrous strips.",
+   "Pea-sized berry-like cones, dusty blue with a waxy bloom, on female trees; they ripen over two years.",
+   "Small, often multi-stemmed tree with an irregular or rounded crown; scraggly with dead wood on exposed rock.",
+   "Crushed foliage smells sharply of cedar or gin."
+  ],
+  "size": "Usually 3–10 m here, occasionally taller; trunk mostly under 50 cm and often split into several stems near the ground.",
+  "lifespan": "Slow-growing and long-lived — a few hundred years is normal, and individuals on dry rock can live much longer.",
+  "in_the_boundary": "Native and scattered across dry rocky slopes, bluffs and open ponderosa-pine benches around Grand Forks, Rock Creek and Osoyoos, often near the Kettle River. Rarer toward moister Christina Lake. In town, upright blue cultivars like 'Skyrocket' and 'Wichita Blue' are this same species.",
+  "common_problems": [
+   "Multi-stem forks with bark trapped between them can split apart under wet, heavy snow; upright cultivars splay open.",
+   "Tip blight and rust fungi brown branch tips in wet springs; orange jelly galls show up on rust-infected trees.",
+   "Spider mites in hot, dusty summers turn foliage dull grey and speckled; drought-stressed trees suffer most.",
+   "Root rot where yard soil stays wet — it evolved on rock and dislikes lawn irrigation and poor drainage."
+  ],
+  "firesmart": "High hazard. FireSmart BC lists junipers among the most flammable landscaping plants — oily foliage plus dead needles packed inside the crown. Worth keeping out of the 10-metre zone around buildings, especially right against walls or under eaves.",
+  "watch_for": [
+   "A stem leaning out of the clump after snow, or a crack where trunks meet — worth an arborist's look.",
+   "Whole branches or one side browning and staying brown into summer — a reason to have it looked at.",
+   "Thick dead build-up inside the crown within a few metres of a building — worth a FireSmart clearance look."
+  ],
+  "lookalikes": [
+   "Common juniper — a low sprawling shrub with only sharp needle leaves in threes, never flat scales.",
+   "Western redcedar — flat fern-like sprays and tiny woody cones instead of blue berries; a far bigger tree on moist ground.",
+   "Planted Chinese or savin junipers — very similar; a wild tree on a rock bluff here is almost always Rocky Mountain."
+  ],
+  "fun_fact": "Those tidy blue 'Skyrocket' and 'Wichita Blue' columns in town yards are cultivated forms of this same rugged wild tree clinging to the Boundary's rock bluffs. Birds spread it — the seeds sprout better after passing through a robin or waxwing."
+ },
+ "trembling_aspen": {
+  "key": "trembling_aspen",
+  "common_name": "Trembling aspen",
+  "latin_name": "Populus tremuloides",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "Smooth, pale greenish-white to cream bark with dark scars and knots; older trunks turn rough and dark near the base.",
+   "Small round leaves with fine teeth, on flattened stalks that make them flutter in the slightest breeze.",
+   "Leaves turn brilliant clear yellow in fall, usually all at once across a grove.",
+   "Slender, straight trunk with a narrow rounded crown; grows in dense stands of near-identical trees.",
+   "Catkins in early spring before the leaves; fluffy cottony seed in late spring on female trees."
+  ],
+  "size": "Usually 10–20 metres tall in the Boundary, sometimes 25 or more on moist ground; trunks mostly 20–40 cm across.",
+  "lifespan": "Stems are short-lived for a tree—typically 50–100 years, often declining sooner on dry sites—but the shared root system can outlive many generations of stems.",
+  "in_the_boundary": "Common along creeks, seepage areas, moist draws and lake margins from Rock Creek to Christina Lake; forms groves on north slopes and old burns, and pops up along fencelines and ditches. Frequently spreads by root suckers into yards and pastures.",
+  "common_problems": [
+   "Heart rot and trunk cankers are common in older stems; the wood is soft and hollows out from the inside.",
+   "Drought stress on dry sites: crown dieback, sparse leaves and early leaf drop after hot summers.",
+   "Root suckers spreading through lawns, gardens and under driveways; cutting one stem often triggers more.",
+   "Leaf miners, tent caterpillars and leaf-spot fungi disfigure foliage; brittle limbs and stems break in wet snow or wind."
+  ],
+  "firesmart": "Deciduous, with moist leaves and little resin—FireSmart BC rates aspen among the lower-hazard trees to have near a home. Keep dead stems, suckers and leaf litter cleared within 10 metres of the house.",
+  "watch_for": [
+   "Shelf fungi (conks) on the trunk, or a hollow sound when tapped—worth having an arborist look at.",
+   "Dead top or major limbs, especially over a roof, driveway or play area—a good reason to call.",
+   "Sunken, dark or oozing patches of bark, or a lean that has recently changed."
+  ],
+  "lookalikes": [
+   "Paper birch: bark peels in papery strips and leaves are pointed ovals; aspen bark doesn't peel.",
+   "Black cottonwood: much bigger, furrowed grey bark, large sticky buds and bigger, longer leaves.",
+   "Planted poplars (Swedish columnar, Lombardy): tall narrow spires in rows, never wild groves."
+  ],
+  "fun_fact": "A whole grove is often one organism—genetically identical stems off a shared root system, which is why they leaf out and turn gold together. The chalky powder on the bark is a natural sunscreen, and the green layer beneath it photosynthesizes on mild winter days."
+ },
+ "black_cottonwood": {
+  "key": "black_cottonwood",
+  "common_name": "Black cottonwood",
+  "latin_name": "Populus trichocarpa",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "Leaves triangular to egg-shaped with a pointed tip, dark green above, pale whitish below, often with rusty resin stains.",
+   "Big, sticky, fragrant buds in spring; the whole tree smells of balsam on a warm day.",
+   "Young bark smooth and grey-green; old trunks deeply furrowed, thick and grey.",
+   "Female trees drop drifts of white cotton fluff in early summer; catkins hang before the leaves.",
+   "Very tall, straight trunk with a narrow crown and heavy upper limbs; often the tallest thing along the river."
+  ],
+  "size": "Commonly 30–45 m tall, occasionally more — the biggest broadleaf in BC. Old riverside trunks can reach 1–2 m across.",
+  "lifespan": "Fast-growing and short-lived for its size: often 100–150 years, though many yard trees start declining well before that.",
+  "in_the_boundary": "Lines the Kettle and Granby rivers, Christina Lake shores, creek bottoms and gravel bars, wherever roots can reach water. Also common on older Grand Forks and Osoyoos lots, along irrigation ditches, and as fast-growing volunteers on any damp ground — often the biggest tree on the property.",
+  "common_problems": [
+   "Brittle, fast-grown wood: big limbs shed in wind and wet snow, and sometimes on still, hot summer days.",
+   "Internal decay and hollowing in older trunks and limb stubs; cottonwood rots from the inside while still leafing out.",
+   "Wide, water-seeking roots that heave driveways and patios and crowd septic fields, drains and foundations.",
+   "Drought stress on dry benches away from the river: thinning crowns, top dieback, cankers and poplar borer after dry years."
+  ],
+  "firesmart": "Deciduous, so FireSmart BC treats it as lower hazard than conifers near a home; the leafy crown holds moisture. Its fire load is what it drops: dead limbs, dry leaf litter and June cotton in gutters, on roofs and under decks. Keep those cleared near the house.",
+  "watch_for": [
+   "Large dead or hanging limbs, or fresh limb-drop wounds, over a roof, driveway, deck or play area — worth a look.",
+   "Shelf fungi or mushrooms on the trunk, cavities, oozing seams, or a hollow sound when knocked — reasons to call an arborist.",
+   "A new lean, cracked or lifting soil at the base, or bank erosion undercutting roots after spring high water."
+  ],
+  "lookalikes": [
+   "Balsam poplar: near-identical cousin that blends into cottonwood in the interior; cottonwood has whiter leaf undersides and grows much bigger.",
+   "Trembling aspen: much smaller, smooth chalky-white bark, small round leaves that shiver on flat stalks.",
+   "Planted hybrid and Lombardy poplars: usually in straight windbreak rows or a tight column, rather than a spreading riverside giant."
+  ],
+  "fun_fact": "The biggest broadleaf tree in British Columbia, and the first tree ever to have its whole genome sequenced (2006). The June 'snowstorm' of cotton comes only from female trees, each seed riding its own tuft of fluff to find a fresh gravel bar."
+ },
+ "paper_birch": {
+  "key": "paper_birch",
+  "common_name": "Paper birch",
+  "latin_name": "Betula papyrifera",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "White to cream bark that peels in thin papery strips; dark horizontal lines (lenticels) and black branch scars.",
+   "Young trees and stems have reddish-brown bark that turns white with age — don't rule out a dark-barked sapling.",
+   "Leaves oval with a pointed tip and doubly-toothed edges, 5–10 cm long; bright yellow in fall.",
+   "Slender, often multi-stemmed trunks with a narrow, open crown and fine, slightly drooping twigs.",
+   "Dangling catkins in spring; small cone-like seed clusters that break apart into tiny winged seeds by fall."
+  ],
+  "size": "Usually 15–25 m tall, occasionally to 30 m on good sites; trunk 30–60 cm across. Often smaller and clumpier on dry Boundary slopes.",
+  "lifespan": "Short-lived for a tree: typically 60–100 years, occasionally longer in cool, moist sites. Yard birch in hot, dry ground often decline sooner.",
+  "in_the_boundary": "Native here but a moisture-lover: look for it along creeks, lake shores and north-facing draws, more common toward Christina Lake than on the dry Grand Forks benches. Seeds in fast after fire or clearing. Widely planted as a yard tree in town, where it relies on irrigation.",
+  "common_problems": [
+   "Bronze birch borer: a beetle that kills drought-stressed birch from the top down, often over a few summers.",
+   "Drought stress: shallow roots and a thirst for cool soil make it struggle through our hot, dry summers, especially unwatered.",
+   "Decay and heart rot: older or wounded stems rot inside while the bark still looks fine.",
+   "Weak wood and snow load: multi-stem clumps split at the crotch, and heavy wet snow or ice bends and snaps stems."
+  ],
+  "firesmart": "Deciduous, so FireSmart BC treats birch as lower hazard near a home than pine or fir. The catch: peeling bark and dead birch burn readily, so keep dead stems, fallen bark and leaf litter cleared from the 10-metre zone around the house.",
+  "watch_for": [
+   "Thinning or dead branches at the very top of the crown while lower limbs still leaf out — worth a look.",
+   "Small D-shaped holes or raised, winding ridges in the bark, or rusty staining on the trunk — a reason to call.",
+   "Shelf fungi on the trunk, a split between clumped stems, or a leaning stem over a roof, driveway or line."
+  ],
+  "lookalikes": [
+   "Trembling aspen: bark is smooth, greenish-white and chalky, never peels in papery sheets; round leaves flutter in wind.",
+   "Water birch: shrubby streamside native with shiny reddish-brown bark that stays dark; usually many stems under 10 m.",
+   "European white / weeping birch: planted yard tree with drooping twigs, diamond-shaped leaves and black, fissured bark at the base."
+  ],
+  "fun_fact": "This is the canoe birch. Its bark is so waterproof and rot-resistant that a fallen birch log often ends up as a hollow tube of bark with the wood inside gone — and a strip of it will light even when wet."
+ },
+ "douglas_maple": {
+  "common_name": "Douglas maple",
+  "latin_name": "Acer glabrum",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "Small tree or large shrub, often several stems, rarely over 10 m tall",
+   "Leaves in opposite pairs, 3–5 lobed and toothed, 5–12 cm, turning yellow to red in fall",
+   "Twigs smooth and reddish with paired buds at the tip",
+   "Paired winged seeds hanging in clusters, the wings nearly parallel"
+  ],
+  "size": "Usually 3–10 m tall; trunks rarely more than 30 cm across.",
+  "lifespan": "A few decades to around a century.",
+  "in_the_boundary": "Common on moist slopes, creek draws and forest edges across the Boundary, often tucked under bigger conifers or along roadsides; rarely planted.",
+  "common_problems": [
+   "Several stems meeting in tight forks that can split under wet snow",
+   "Crowding and shading when it grows up beneath larger conifers",
+   "Deer browse and leaf-feeding insects on young plants"
+  ],
+  "firesmart": "A deciduous, low-flammability species — FireSmart BC treats deciduous trees as a lower-hazard choice near homes than conifers, though dead stems and leaf litter still need clearing.",
+  "watch_for": [
+   "Stems splitting apart at a tight fork",
+   "Dead stems in a clump growing close to a building"
+  ],
+  "lookalikes": [
+   "Vine maple — a coastal species with 7–9 lobes per leaf rather than 3–5",
+   "Norway maple seedlings — leaves much larger with milky sap in the stalk"
+  ],
+  "fun_fact": "It is the only maple native to the BC Interior.",
+  "key": "douglas_maple"
+ },
+ "choke_cherry": {
+  "common_name": "Choke cherry",
+  "latin_name": "Prunus virginiana",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "Shrub or small tree, often forming thickets, usually under 8 m",
+   "Oval leaves with a finely toothed edge and a sharply pointed tip, glossy on top",
+   "Long drooping clusters of white flowers in late spring, then dark red to black cherries",
+   "Smooth grey-brown bark with horizontal marks; crushed twigs smell of bitter almond"
+  ],
+  "size": "Typically 2–8 m tall.",
+  "lifespan": "Short-lived — individual stems often 20–40 years, though thickets renew themselves by suckering.",
+  "in_the_boundary": "Everywhere along fencelines, creek banks, roadsides and forest edges; a favourite of bears and birds in late summer.",
+  "common_problems": [
+   "Black knot fungus — dark, lumpy swellings that girdle branches",
+   "Tent caterpillars stripping the leaves in outbreak years",
+   "Suckering thickets spreading into lawns and fencelines"
+  ],
+  "firesmart": "Deciduous and low in flammability, though dense thickets and dead stems close to buildings still count as fuel under FireSmart guidance.",
+  "watch_for": [
+   "Black knot galls spreading through a tree you want to keep",
+   "Larger stems leaning over a shed, fence or driveway"
+  ],
+  "lookalikes": [
+   "Saskatoon — rounder leaves toothed only toward the tip",
+   "Pin cherry — flowers in flat clusters rather than long drooping ones"
+  ],
+  "fun_fact": "Its leaves, twigs and pits contain cyanide-producing compounds, which is why livestock owners keep an eye on it.",
+  "key": "choke_cherry"
+ },
+ "willow": {
+  "common_name": "Willow",
+  "latin_name": "Salix species",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "Long, narrow leaves, much longer than wide, often silvery underneath",
+   "Fuzzy catkins — pussy willows — in early spring, before or with the leaves",
+   "Flexible, often yellow or reddish twigs; many species are multi-stemmed shrubs",
+   "Weeping willow has long, sweeping branches that hang toward the ground"
+  ],
+  "size": "Native willows range from knee-high shrubs to 15 m trees; weeping willows reach 15–20 m with very wide crowns.",
+  "lifespan": "Fast-growing and short-lived; most large willows decline after 30–60 years.",
+  "in_the_boundary": "Native willows line the Kettle and Granby rivers, Christina Lake and every creek and ditch; weeping willows are planted near ponds and in larger yards.",
+  "common_problems": [
+   "Weak, brittle wood that drops large limbs in wind, ice and wet snow",
+   "Aggressive water-seeking roots that find drains, septic fields and foundations",
+   "Decay and hollowing in older trunks",
+   "Canker and dieback in drought-stressed trees"
+  ],
+  "firesmart": "Deciduous and relatively low in flammability; keep dead wood and leaf litter cleared near structures.",
+  "watch_for": [
+   "Large limbs hanging over a roof, driveway or parked vehicles",
+   "Cavities or fungal growth on the trunk",
+   "A weeping willow within reach of a septic field or drain line"
+  ],
+  "lookalikes": [
+   "Cottonwood and poplar saplings — leaves broader and more triangular",
+   "Russian olive — silvery leaves, but a thorny non-native shrub"
+  ],
+  "fun_fact": "Willow bark contains salicin, the natural forerunner of aspirin.",
+  "key": "willow"
+ },
+ "blue_spruce": {
+  "common_name": "Colorado blue spruce",
+  "latin_name": "Picea pungens",
+  "type": "conifer",
+  "native": false,
+  "recognize": [
+   "Stiff, sharp, four-sided needles that roll between your fingers, green to strong silver-blue",
+   "Dense, symmetrical pyramid with branches in tidy layers, often right down to the ground",
+   "Cones 6–10 cm, light brown and papery with wavy-edged scales, hanging from the upper branches",
+   "Needles sit on tiny pegs that stay on the twig after the needles drop"
+  ],
+  "size": "15–25 m in yards, occasionally taller; broad at the base.",
+  "lifespan": "Commonly 60–100 years in a landscape setting.",
+  "in_the_boundary": "One of the most-planted yard and windbreak trees in every Boundary town, usually within a few metres of the house.",
+  "common_problems": [
+   "Cytospora canker — lower branches dying with white resin on the bark, common on drought-stressed trees",
+   "Needle cast and spider mites thinning the inner crown",
+   "Outgrowing its spot and crowding the house, roof and eaves",
+   "A heavy, dense crown that catches wind and wet snow"
+  ],
+  "firesmart": "A conifer within 10 m of a home is a priority under FireSmart BC — dense, resinous and branched to the ground, it acts as a ladder fuel; limbing up or removal are the usual recommendations.",
+  "watch_for": [
+   "Lower branches dying from the bottom up",
+   "A trunk within reach of the roofline",
+   "A noticeable new lean after a windstorm"
+  ],
+  "lookalikes": [
+   "Engelmann / white spruce — softer, greener needles and a looser crown",
+   "Norway spruce — drooping branchlets and much longer cones"
+  ],
+  "fun_fact": "The blue colour is a waxy coating on the needles; underneath, the wood is the same as any other spruce.",
+  "key": "blue_spruce"
+ },
+ "norway_maple": {
+  "common_name": "Norway maple",
+  "latin_name": "Acer platanoides",
+  "type": "broadleaf",
+  "native": false,
+  "recognize": [
+   "Large five-lobed leaves 10–18 cm across with pointed lobes; the stalk oozes milky sap when snapped",
+   "Dense, rounded crown that casts deep shade; yellow fall colour, or purple leaves on the common Crimson King form",
+   "Grey bark with tight, regular furrows; reddish-brown buds",
+   "Winged seeds with the wings spread nearly flat, like a moustache"
+  ],
+  "size": "15–25 m tall with a crown nearly as wide.",
+  "lifespan": "60–100 years in towns; shorter where roots are cramped.",
+  "in_the_boundary": "A common street and yard shade tree in Grand Forks and the other Boundary towns; not found in the wild here.",
+  "common_problems": [
+   "Verticillium wilt — branches dying one at a time, with streaked wood underneath",
+   "Girdling roots that strangle the trunk at ground level",
+   "Tar spot and leaf scorch in hot, dry summers",
+   "Shallow roots lifting sidewalks and driveways"
+  ],
+  "firesmart": "A broadleaf tree with dense, moist foliage — considered a lower-hazard species near homes than conifers under FireSmart guidance.",
+  "watch_for": [
+   "One side of the crown dying back while the rest looks fine",
+   "A root wrapping tightly around the base of the trunk",
+   "Cracks or cavities in the main stem"
+  ],
+  "lookalikes": [
+   "Sugar maple — no milky sap and rounder gaps between lobes (rare here)",
+   "Manitoba maple — compound leaves with 3–5 leaflets instead of one lobed leaf"
+  ],
+  "fun_fact": "The milky sap in the leaf stalk is the quickest way to tell a Norway maple from every other maple.",
+  "key": "norway_maple"
+ },
+ "manitoba_maple": {
+  "common_name": "Manitoba maple (box elder)",
+  "latin_name": "Acer negundo",
+  "type": "broadleaf",
+  "native": false,
+  "recognize": [
+   "Compound leaves with 3–5 (sometimes 7) leaflets — the only maple here without a single lobed leaf",
+   "Green to purplish twigs, often with a whitish bloom; leaves and buds in opposite pairs",
+   "Irregular, often multi-stemmed form with a broad, sprawling crown",
+   "Long chains of paired winged seeds that hang on through winter"
+  ],
+  "size": "10–20 m tall, frequently wider than it is tall.",
+  "lifespan": "Fast-growing and short-lived — often declining by 30–60 years.",
+  "in_the_boundary": "Planted for quick shade decades ago and now self-seeded along rivers, alleys and fencelines throughout the Boundary.",
+  "common_problems": [
+   "Weak, brittle wood — large limbs fail in wind, ice and wet snow",
+   "Decay and hollow trunks in middle-aged trees",
+   "Boxelder bugs gathering on and around the tree in fall",
+   "Prolific self-seeding"
+  ],
+  "firesmart": "Deciduous and low in flammability, but its habit of shedding dead limbs means more woody debris to keep cleared near buildings.",
+  "watch_for": [
+   "Big limbs over the house, driveway or vehicles",
+   "Cavities, fungus or soft wood at the base or at old branch stubs",
+   "A tight fork between stems with bark pinched inside it"
+  ],
+  "lookalikes": [
+   "Ash — also compound, opposite leaves, but more leaflets and single-winged seeds",
+   "Norway maple — simple lobed leaves"
+  ],
+  "fun_fact": "Prairie settlers tapped it for syrup long before sugar maple was available there.",
+  "key": "manitoba_maple"
+ },
+ "elm": {
+  "common_name": "Elm (Siberian / American)",
+  "latin_name": "Ulmus pumila, Ulmus americana",
+  "type": "broadleaf",
+  "native": false,
+  "recognize": [
+   "Oval leaves with a double-toothed edge; American elm leaves are lopsided at the base, Siberian elm leaves small and nearly symmetrical",
+   "Siberian elm: a brittle, twiggy crown and deeply furrowed grey bark; American elm: a tall vase shape with arching limbs",
+   "Papery round seeds in spring, often carpeting the ground",
+   "Alternate leaves on zig-zag twigs"
+  ],
+  "size": "Siberian elm 15–20 m; American elm 20–30 m with a wide vase-shaped crown.",
+  "lifespan": "Siberian elm 50–80 years; American elm can live 150 years or more where Dutch elm disease is absent.",
+  "in_the_boundary": "Siberian elms were planted for fast shade and windbreaks and now seed themselves along alleys, fences and riverbanks; a few grand American elms remain on older town lots.",
+  "common_problems": [
+   "Siberian elm: brittle wood that sheds limbs constantly, especially in wet snow",
+   "Seedlings sprouting in every crack, hedge and fenceline",
+   "Elm leaf beetle and scale insects thinning the crown",
+   "Dutch elm disease would threaten American elms if it reached the region"
+  ],
+  "firesmart": "Deciduous and lower-flammability near homes, though constant dead-twig shedding adds fuel to keep cleared.",
+  "watch_for": [
+   "Large dead limbs or broken hangers in the crown",
+   "Leaves on one branch yellowing and wilting in midsummer",
+   "Deep cracks or cavities in the trunk"
+  ],
+  "lookalikes": [
+   "Birch — peeling white bark, where elm bark is furrowed grey",
+   "Hackberry — warty bark (rare here)"
+  ],
+  "fun_fact": "Siberian elm is so tough it was planted across the prairies as a shelterbelt tree during the 1930s drought.",
+  "key": "elm"
+ },
+ "mountain_ash": {
+  "common_name": "Mountain ash",
+  "latin_name": "Sorbus species",
+  "type": "broadleaf",
+  "native": true,
+  "recognize": [
+   "Compound leaves with 9–17 toothed leaflets along a central stalk",
+   "Flat-topped clusters of creamy white flowers in early summer, then bright orange-red berries that hang on into winter",
+   "Smooth grey bark with horizontal marks; a bushy, rounded form",
+   "Native species are usually multi-stemmed shrubs; the planted European one grows as a single-trunk tree"
+  ],
+  "size": "European mountain ash 8–12 m; native western mountain ash usually 1–5 m.",
+  "lifespan": "Short-lived — European mountain ash often declines after 30–50 years.",
+  "in_the_boundary": "European mountain ash is a common yard tree in Boundary towns; the native mountain ashes grow at higher elevations and on moist slopes.",
+  "common_problems": [
+   "Fireblight — blackened, scorched-looking shoot tips that hook over",
+   "Sunscald and cankers on the trunk, especially on south-facing bark",
+   "Borers in drought-stressed trees",
+   "Waxwings and bears stripping the berries (a nuisance rather than a tree problem)"
+  ],
+  "firesmart": "Deciduous and low in flammability; a reasonable FireSmart-friendly choice near homes.",
+  "watch_for": [
+   "Branch tips dying back with a burnt look",
+   "Sunken or cracked bark on the trunk",
+   "One side of the crown failing to leaf out"
+  ],
+  "lookalikes": [
+   "Ash (Fraxinus) — leaflets in opposite pairs and no berries",
+   "Elderberry — berries dark purple-black"
+  ],
+  "fun_fact": "Despite the name it is not an ash at all — it belongs to the rose family, alongside apples.",
+  "key": "mountain_ash"
+ },
+ "apple_crabapple": {
+  "common_name": "Apple / crabapple",
+  "latin_name": "Malus species",
+  "type": "broadleaf",
+  "native": false,
+  "recognize": [
+   "Oval, toothed leaves on stubby spur shoots; a low, spreading crown often wider than tall",
+   "Showy white-to-pink blossom in May, followed by apples or small crabapples",
+   "Grey-brown bark flaking in irregular scales on older trees",
+   "Old orchard trees have gnarled, twisting limbs and several large scaffold branches"
+  ],
+  "size": "Orchard apples 5–10 m; crabapples 4–8 m.",
+  "lifespan": "Productive for 50–80 years; old homestead trees can stand well past 100.",
+  "in_the_boundary": "The Boundary was orchard country a century ago, and old apples still stand on homesteads, in hedgerows and along the Kettle River; crabapples line yards and streets.",
+  "common_problems": [
+   "Fireblight — scorched-looking, hooked shoot tips",
+   "Apple scab and powdery mildew spotting leaves and fruit",
+   "Decay in old limbs and trunk cavities",
+   "Heavy fruit loads splitting branches, and bears drawn to unpicked fruit"
+  ],
+  "firesmart": "Deciduous and low in flammability; keep dead wood pruned and fallen fruit cleaned up — wildlife, not fire, is the main concern.",
+  "watch_for": [
+   "Large cavities or fungus where big limbs meet the trunk",
+   "A scaffold limb splitting away under a fruit load",
+   "Blackened shoot tips spreading down a branch"
+  ],
+  "lookalikes": [
+   "Pear — glossier leaves and a more upright form",
+   "Hawthorn — thorns and smaller leaves"
+  ],
+  "fun_fact": "A single old apple tree can drop 200 kg of fruit in a season — one reason bear visits are a Boundary autumn tradition.",
+  "key": "apple_crabapple"
+ },
+ "scots_pine": {
+  "common_name": "Scots pine",
+  "latin_name": "Pinus sylvestris",
+  "type": "conifer",
+  "native": false,
+  "recognize": [
+   "Needles in pairs, short (3–7 cm), twisted and blue-green",
+   "Distinctive orange-red, flaky bark on the upper trunk and branches",
+   "Small cones 3–6 cm with a stubby point on each scale",
+   "A rounded, irregular crown on older trees, often leaning or crooked"
+  ],
+  "size": "15–25 m in the landscape.",
+  "lifespan": "Typically 80–150 years.",
+  "in_the_boundary": "Planted as a windbreak, Christmas-tree and yard species; not native to North America.",
+  "common_problems": [
+   "Pine needle scale and adelgids whitening the needles",
+   "Diplodia tip blight killing new shoots",
+   "Drought stress in hot, dry summers",
+   "Mountain pine beetle can attack it in outbreak years"
+  ],
+  "firesmart": "A resinous conifer — high hazard within 10 m of a home under FireSmart BC; limbing up to 2 m and thinning, or removal, are the usual recommendations close to the house.",
+  "watch_for": [
+   "Needles reddening across the crown in summer",
+   "Pitch tubes or fine sawdust on the bark",
+   "Shoot tips dying back year after year"
+  ],
+  "lookalikes": [
+   "Lodgepole pine — also two needles, but grey bark and cones with sharp prickles",
+   "Ponderosa pine — three long needles and much larger cones"
+  ],
+  "fun_fact": "The orange upper bark is the giveaway — no native BC pine has it.",
+  "key": "scots_pine"
+ },
+ "lombardy_hybrid_poplar": {
+  "common_name": "Lombardy / hybrid poplar",
+  "latin_name": "Populus nigra 'Italica' and hybrid poplars",
+  "type": "broadleaf",
+  "native": false,
+  "recognize": [
+   "Lombardy: a tall, narrow column of upswept branches, like an exclamation mark",
+   "Hybrid poplars: very fast-growing straight trunks in rows or windbreaks, with large triangular leaves",
+   "Triangular to diamond-shaped leaves on flattened stalks that flutter in the wind",
+   "Grey, deeply furrowed bark on old trunks; cottony seed fluff in early summer"
+  ],
+  "size": "Lombardy 20–30 m tall and only 3–5 m wide; hybrid poplars 20–35 m.",
+  "lifespan": "Short — often declining or dying back at 25–40 years.",
+  "in_the_boundary": "Planted as windbreaks, property-line screens and fast shade across the Boundary; rows of dying Lombardy poplars are a familiar sight.",
+  "common_problems": [
+   "Cankers and dieback that kill the top and work downward",
+   "Brittle wood and large limb drop in wind and wet snow",
+   "Aggressive, shallow roots into drains, septic fields and driveways",
+   "Suckering from the roots after cutting"
+  ],
+  "firesmart": "Deciduous and low in flammability, but dead tops and shed limbs mean regular clean-up near structures.",
+  "watch_for": [
+   "Dead tops or large dead limbs on trees near buildings or lines",
+   "Fungal conks on the trunk",
+   "Roots heaving pavement or entering drains"
+  ],
+  "lookalikes": [
+   "Black cottonwood — larger, sticky, fragrant buds and a broad crown",
+   "Trembling aspen — smaller rounded leaves and smooth pale bark"
+  ],
+  "fun_fact": "Every Lombardy poplar in the world is a cutting of the same male tree, which is why they all decline from the same things at the same age.",
+  "key": "lombardy_hybrid_poplar"
+ }
+}
