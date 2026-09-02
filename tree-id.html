@@ -23,6 +23,7 @@
 
   <style>
     .tid-intro { margin: 0 0 1.5rem; }
+    #tidResult, #tidSlots { scroll-margin-top: 130px; }
     .tid-privacy { font-size: 0.85rem; color: #a0a0a0; margin: 0 0 1.5rem; }
     .tid-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 0 0 1.2rem; }
     @media (max-width: 560px) { .tid-slots { grid-template-columns: 1fr; } }
@@ -199,6 +200,7 @@
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tree-id.html">What Tree Is This?</a></li>
+            <li><a href="tree-removal-preview.html">See It Gone</a></li>
             <li><a href="waiver.html">Client Waiver</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
@@ -402,7 +404,8 @@
       }
       html += '<div class="tid-cta"><span>Concerned about this tree?</span>' +
         '<a class="btn btn-primary" href="contact.html">Get a free quote</a>' +
-        '<a class="btn btn-outline" href="tel:7788283456">Call 778-828-3456</a></div></div>';
+        '<a class="btn btn-outline" href="tel:7788283456">Call 778-828-3456</a></div>' +
+        '<p class="tid-alts" style="margin-top:0.9rem;">Curious what your place would look like without it? <a href="tree-removal-preview.html">Try See It Gone</a>.</p></div>';
       result.innerHTML = html; result.hidden = false; wireShare(picked);
       result.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
