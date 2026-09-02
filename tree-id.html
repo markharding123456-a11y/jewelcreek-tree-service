@@ -133,7 +133,7 @@
       <article class="blog-post-content">
 
         <p class="tid-intro">Not sure what's growing in your yard? Take a photo or three and our identifier will tell you the species, how sure it is, and what that tree tends to do around here. It knows the trees of the Boundary &mdash; ponderosa, Douglas-fir, larch, aspen, cottonwood, birch and the common yard trees.</p>
-        <p class="tid-privacy">Identification happens entirely on your device. Your photos are never uploaded or stored.</p>
+        <p class="tid-privacy">Identification happens entirely on your device &mdash; your photos are never uploaded or stored. The identifier itself is a one-time download of about 6&nbsp;MB; after that it works instantly, even on a slow connection.</p>
 
         <div class="tid-tips">
           <strong>For the best result, give it three angles:</strong>
@@ -253,6 +253,7 @@
         img.src = url; img.hidden = false; slot.classList.add('has-photo');
         slot.querySelector('.tid-label').lastChild.textContent = 'Tap to change';
         go.disabled = false;
+        loadAll().catch(function () { /* reported when they tap Identify */ });
       });
       slot.querySelector('.tid-clear').addEventListener('click', function (e) {
         e.preventDefault(); e.stopPropagation();
@@ -266,18 +267,31 @@
     reset.addEventListener('click', function () {
       Array.prototype.forEach.call(document.querySelectorAll('.tid-slot .tid-clear'), function (b) { b.click(); });
       result.hidden = true; result.innerHTML = ''; reset.hidden = true; status.textContent = '';
+      document.getElementById('tidSlots').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     // ---- model ----
+    var loadPromise = null, identifying = false;
     function loadAll() {
       if (model) return Promise.resolve();
+      if (loadPromise) return loadPromise;
       if (typeof tf === 'undefined') return Promise.reject(new Error('runtime'));
-      status.textContent = 'Loading the identifier (one-time download)…';
-      return Promise.all([
-        tf.loadGraphModel(BASE + 'model/model.json'),
+      status.textContent = 'Getting the identifier ready (one-time download, about 6 MB)…';
+      loadPromise = Promise.all([
+        tf.loadGraphModel(BASE + 'model/model.json', { onProgress: function (f) {
+          if (!identifying) status.textContent = 'Getting the identifier ready (one-time download, about 6 MB)… ' + Math.round(f * 100) + '%';
+        } }),
         fetch(BASE + 'model_meta.json').then(function (r) { return r.json(); }),
         fetch(BASE + 'species.json').then(function (r) { return r.json(); })
-      ]).then(function (res) { model = res[0]; meta = res[1]; guide = res[2]; });
+      ]).then(function (res) {
+        model = res[0]; meta = res[1]; guide = res[2];
+        // warm up the GPU shaders now so the first real identification is fast
+        var z = tf.zeros([1, meta.input_size, meta.input_size, 3]);
+        return model.predict(z).data().then(function () { z.dispose(); });
+      }).then(function () {
+        if (!identifying) status.textContent = files.some(Boolean) ? 'Ready — tap Identify when you have your photos.' : '';
+      }).catch(function (err) { loadPromise = null; throw err; });
+      return loadPromise;
     }
 
     // centre-crop to square and resize to the model's input size, same as training
@@ -309,18 +323,18 @@
     }
 
     go.addEventListener('click', function () {
-      go.disabled = true;
+      go.disabled = true; identifying = true;
       loadAll().then(function () {
         status.textContent = 'Looking at your photo' + (files.filter(Boolean).length > 1 ? 's' : '') + '…';
         return Promise.all(files.filter(Boolean).map(toTensor));
       }).then(function (tensors) {
         return predict(tensors).then(function (probs) { tensors.forEach(function (t) { t.dispose(); }); return probs; });
       }).then(function (probs) {
-        status.textContent = '';
+        status.textContent = ''; identifying = false;
         render(Array.prototype.slice.call(probs));
         reset.hidden = false; go.disabled = false;
       }).catch(function (err) {
-        go.disabled = false;
+        go.disabled = false; identifying = false;
         status.textContent = err && err.message === 'runtime'
           ? 'The identifier could not start in this browser. Please email your photos to ' + EMAIL + ' and we’ll identify the tree for you.'
           : 'Sorry, something went wrong reading that photo. Try another photo, or email it to ' + EMAIL + '.';
@@ -345,16 +359,21 @@
       var mail = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Tree ID request') + '&body=' +
                  encodeURIComponent('Hi Jewel Creek,\n\nCould you help identify this tree? (Photos attached.)\n\nWhere it is: \nAnything else: ');
       var html = '';
+      var picked = files.filter(Boolean), nPicked = picked.length;
+      var canShare = !!(navigator.canShare && navigator.share && navigator.canShare({ files: picked }));
+      var shareBtn = canShare ? '<button type="button" class="btn btn-primary" id="tidShare">Send my photos to Jewel Creek</button>' : '';
+      var moreTip = nPicked < 3 ? ' You can also add ' + (nPicked === 1 ? 'a second and third photo' : 'a third photo') + ' above — bark, needles or leaves, and the whole tree — and try again.' : '';
 
       if (unsure) {
         html += '<div class="tid-result tid-unsure"><h2>We’re not sure about this one</h2>' +
           '<p>The identifier couldn’t match your photo' + (files.filter(Boolean).length > 1 ? 's' : '') + ' confidently' +
           (top.key !== 'other' && best.p >= 0.3 ? ' — the closest guess was <strong>' + esc(nameOf(best.key)) + '</strong> at ' + Math.round(best.p * 100) + '%, but that isn’t enough to go on' : '') + '.</p>' +
-          '<p>The surest route: email your photos straight to Jewel Creek Tree Service and a real person will tell you what it is.</p>' +
-          '<div class="tid-cta"><a class="btn btn-primary" href="' + mail + '">Email my photos to Jewel Creek</a>' +
+          '<p>The surest route: send your photos straight to Jewel Creek Tree Service and a real person will tell you what it is.</p>' +
+          '<div class="tid-cta">' + shareBtn + '<a class="btn ' + (canShare ? 'btn-outline' : 'btn-primary') + '" href="' + mail + '">' + (canShare ? 'Email instead' : 'Email my photos to Jewel Creek') + '</a>' +
           '<a class="btn btn-outline" href="tel:7788283456">Call 778-828-3456</a></div>' +
-          '<p class="tid-disclaimer">Tip: a sharp close-up of the needles or leaves, plus the bark, usually does it.</p></div>';
-        result.innerHTML = html; result.hidden = false; return;
+          '<p class="tid-disclaimer">Tip: a sharp close-up of the needles or leaves, plus the bark, usually does it.' + esc(moreTip) + '</p></div>';
+        result.innerHTML = html; result.hidden = false; wireShare(picked);
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' }); return;
       }
 
       var g = guide[best.key] || {};
@@ -363,7 +382,8 @@
         '<div class="tid-conf"><strong>' + Math.round(best.p * 100) + '% confidence</strong> — ' +
         (likely ? 'a likely match, but not a certain one' : 'a strong match') +
         '<div class="tid-conf-bar"><span style="width:' + Math.round(best.p * 100) + '%"></span></div>' +
-        (likely ? '<small>To be certain, <a href="' + mail + '">email your photos to Jewel Creek</a> and we’ll confirm it.</small>' : '<small>Based on ' + files.filter(Boolean).length + ' photo' + (files.filter(Boolean).length > 1 ? 's' : '') + '.</small>') +
+        (likely ? '<small>To be certain, <a href="' + mail + '">email your photos to Jewel Creek</a> and we’ll confirm it.' + esc(moreTip) + '</small>' : '<small>Based on ' + nPicked + ' photo' + (nPicked > 1 ? 's' : '') + '.</small>') +
+        (likely && canShare ? '<div class="tid-actions" style="margin-top:0.8rem;">' + shareBtn + '</div>' : '') +
         '</div>';
       var alts = namedAlts.slice(1, 3).filter(function (r) { return r.p >= 0.08; });
       if (alts.length) html += '<p class="tid-alts">Other possibilities: ' + alts.map(function (r) { return esc(nameOf(r.key)) + ' (' + Math.round(r.p * 100) + '%)'; }).join(', ') + '</p>';
@@ -383,8 +403,19 @@
       html += '<div class="tid-cta"><span>Concerned about this tree?</span>' +
         '<a class="btn btn-primary" href="contact.html">Get a free quote</a>' +
         '<a class="btn btn-outline" href="tel:7788283456">Call 778-828-3456</a></div></div>';
-      result.innerHTML = html; result.hidden = false;
+      result.innerHTML = html; result.hidden = false; wireShare(picked);
       result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function wireShare(picked) {
+      var b = document.getElementById('tidShare');
+      if (!b) return;
+      b.addEventListener('click', function () {
+        navigator.share({
+          files: picked, title: 'Tree ID request for Jewel Creek Tree Service',
+          text: 'Hi Jewel Creek (' + EMAIL + '), could you help identify this tree? Photos attached.'
+        }).catch(function () { /* user cancelled the share sheet */ });
+      });
     }
   })();
   </script>
