@@ -319,5 +319,15 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+  // Prefill the form from a link, e.g. contact.html?service=Danger%20Tree%20Removal&msg=...
+  (function () {
+    var q = new URLSearchParams(location.search), m = q.get('msg'), s = q.get('service');
+    var msg = document.getElementById('message'), sel = document.getElementById('service');
+    if (m && msg && !msg.value) msg.value = m;
+    if (s && sel) for (var i = 0; i < sel.options.length; i++) if (sel.options[i].value === s) { sel.selectedIndex = i; break; }
+    if (m && msg) msg.scrollIntoView({ block: 'center' });
+  })();
+  </script>
 </body>
 </html>

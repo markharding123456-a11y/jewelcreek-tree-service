@@ -96,8 +96,14 @@
   var seed = 12345;
   function rnd() { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
 
-  function level(img, mask, W, H, R, nnf, dist, iters, valid, srcList, progress, pbase, pspan, knownPasses) {
-    var PD = function (tx, ty, sx, sy, best) { return knownOnly ? patchDistKnown(img, mask, W, tx, ty, sx, sy, R) : patchDist(img, W, tx, ty, sx, sy, R, best); };
+  function level(img, mask, W, H, R, nnf, dist, iters, valid, srcList, progress, pbase, pspan, knownPasses, lam, copyMix) {
+    var fullCount = (2 * R + 1) * (2 * R + 1) * 3, maxR2 = Math.max(W, H) * Math.max(W, H);
+    // locality bias: distant sources pay a penalty, so the fill prefers its own neighbourhood
+    var PD = function (tx, ty, sx, sy, best) {
+      var pen = lam ? lam * fullCount * 300 * ((sx - tx) * (sx - tx) + (sy - ty) * (sy - ty)) / maxR2 : 0;
+      if (pen >= best) return Infinity;
+      return (knownOnly ? patchDistKnown(img, mask, W, tx, ty, sx, sy, R) : patchDist(img, W, tx, ty, sx, sy, R, best - pen)) + pen;
+    };
     var knownOnly = knownPasses > 0;
     var holes = [], x, y, k, i;
     for (y = R; y < H - R; y++) for (x = R; x < W - R; x++) if (mask[y * W + x]) holes.push(y * W + x);
@@ -143,6 +149,10 @@
         }
       }
       for (i = 0; i < holes.length; i++) { k = holes[i]; if (voteN[k] > 0) { img[k * 3] = vote0[k] / voteN[k]; img[k * 3 + 1] = vote1[k] / voteN[k]; img[k * 3 + 2] = vote2[k] / voteN[k]; } }
+      if (lastPass && copyMix > 0) {
+        for (i = 0; i < holes.length; i++) { k = holes[i]; var sc = nnf[k] * 3, kc = k * 3;
+          img[kc] += copyMix * (img[sc] - img[kc]); img[kc + 1] += copyMix * (img[sc + 1] - img[kc + 1]); img[kc + 2] += copyMix * (img[sc + 2] - img[kc + 2]); }
+      }
       if (knownOnly && it + 1 >= knownPasses) { knownOnly = false; for (i = 0; i < holes.length; i++) { k = holes[i]; dist[k] = patchDist(img, W, k % W, (k / W) | 0, nnf[k] % W, (nnf[k] / W) | 0, R, Infinity); } }
       if (progress) progress(pbase + pspan * (it + 1) / iters);
     }
@@ -151,16 +161,19 @@
   function inpaint(rgba, W, H, mask0, opts, progress) {
     opts = opts || {};
     var R = opts.radius || 3, dil = opts.dilate == null ? 4 : opts.dilate;
+    var lam = opts.locality == null ? 0.5 : opts.locality, copyMix = opts.copyMix == null ? 0 : opts.copyMix;
+    var itersFine = opts.itersFine || 4, itersMid = opts.itersMid || 4;
     var img = new Float32Array(W * H * 3), i, c;
     for (i = 0; i < W * H; i++) for (c = 0; c < 3; c++) img[i * 3 + c] = rgba[i * 4 + c];
     var mask = dilate(mask0, W, H, dil);
+    inpaint.lastMask = mask;
     // pyramid
     var pyr = [{ img: img, mask: mask, W: W, H: H }];
     while (Math.min(pyr[pyr.length - 1].W, pyr[pyr.length - 1].H) > 60 && pyr.length < 7) {
       var p = pyr[pyr.length - 1]; pyr.push(downscale(p.img, p.mask, p.W, p.H));
     }
     var L = pyr.length, lv, nnf = null, dist = null;
-    var itersFor = function (l) { return l === L - 1 ? 8 : l >= 2 ? 5 : l === 1 ? 4 : 3; };
+    var itersFor = function (l) { return l === L - 1 ? 8 : l >= 2 ? 5 : l === 1 ? itersMid : itersFine; };
     var totalIters = 0; for (lv = 0; lv < L; lv++) totalIters += itersFor(lv);
     var done = 0;
     for (lv = L - 1; lv >= 0; lv--) {
@@ -181,7 +194,7 @@
         nnf = nn2; dist = new Float32Array(P.W * P.H);
       }
       if (!vs.list.length) { diffuse(P.img, P.mask, P.W, P.H, 200); }
-      else { var its = itersFor(lv); level(P.img, P.mask, P.W, P.H, R, nnf, dist, its, vs.valid, vs.list, progress, done / totalIters, its / totalIters, lv === L - 1 ? 3 : 1); done += its; }
+      else { var its = itersFor(lv); level(P.img, P.mask, P.W, P.H, R, nnf, dist, its, vs.valid, vs.list, progress, done / totalIters, its / totalIters, lv === L - 1 ? 3 : 1, lam, copyMix); done += its; }
     }
     // Poisson blend: keep the fill's texture gradients, force its tones to meet the original at the seam
     var f = null;
@@ -223,7 +236,8 @@
     self.onmessage = function (e) {
       var d = e.data;
       var out = inpaint(d.rgba, d.W, d.H, d.mask, d.opts, function (p) { self.postMessage({ progress: p }); });
-      self.postMessage({ done: true, rgba: out }, [out.buffer]);
+      var used = inpaint.lastMask;
+      self.postMessage({ done: true, rgba: out, mask: used }, [out.buffer, used.buffer]);
     };
   }
 })(typeof self !== 'undefined' ? self : this);
