@@ -246,8 +246,8 @@
  },
  "spruce": {
   "key": "spruce",
-  "common_name": "Spruce (Engelmann / white)",
-  "latin_name": "Picea engelmannii, Picea glauca and their hybrids",
+  "common_name": "Spruce (Engelmann, white or Colorado blue)",
+  "latin_name": "Picea engelmannii, Picea glauca, Picea pungens",
   "type": "conifer",
   "native": true,
   "recognize": [
@@ -259,7 +259,7 @@
   ],
   "size": "Forest trees commonly 20–40 m, occasionally taller, trunks up to about 1 m across. Yard trees usually 15–25 m.",
   "lifespan": "Commonly 200–400 years in the wild, with Engelmann sometimes older; planted yard trees typically far less.",
-  "in_the_boundary": "Interior spruce here is a blend of Engelmann, white and their hybrids — near-impossible to separate from a photo, and it hardly matters for care. Native to moister ground: Christina Lake, creek bottoms, north slopes and higher elevations. Widely planted as a yard tree in every Boundary town.",
+  "in_the_boundary": "Interior spruce here is a blend of Engelmann, white and their hybrids — near-impossible to separate from a photo, and it hardly matters for care. Native to moister ground: Christina Lake, creek bottoms, north slopes and higher elevations. Widely planted as a yard tree in every Boundary town; Colorado blue spruce is the planted yard version, often close to the house.",
   "common_problems": [
    "Drought stress in hot, dry yards: a moisture-loving tree thins and browns from the inside out, often with spider mites.",
    "Spruce beetle attacks stressed or freshly downed trees and can spread to healthy neighbours.",

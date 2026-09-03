@@ -328,7 +328,12 @@
         var batch = tf.concat(views, 0);
         var p = model.predict(batch);
         var logits = tf.log(tf.maximum(p, 1e-9)).div(meta.temperature);
-        return tf.softmax(logits).mean(0);
+        var probs = tf.softmax(logits).mean(0);
+        // regional prior: how common each species actually is around the Boundary (from local observation records)
+        if (meta.prior_weights && meta.prior_weights.length === meta.classes.length) {
+          probs = probs.mul(tf.tensor1d(meta.prior_weights)); probs = probs.div(probs.sum());
+        }
+        return probs;
       }).data();
     }
 
