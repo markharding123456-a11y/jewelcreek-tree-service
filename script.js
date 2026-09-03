@@ -268,6 +268,10 @@ function toggleFaq(el) {
 (function() {
   var chatbotKB = [
     {
+      keywords: ['what would it look like', 'look like without', 'without the tree', 'without that tree', 'see it gone', 'preview', 'render', 'visualize', 'visualise', 'picture without'],
+      a: "Try See It Gone: jewelcreektreeservice.com/tree-removal-preview.html - upload a photo, tap the tree, and it shows you a preview with the tree gone. It runs right on your phone, and there's a quote button when you like what you see."
+    },
+    {
       keywords: ['what tree', 'which tree', 'what kind of tree', 'what type of tree', 'identify', 'identification', 'species', 'what is this tree', 'name of', 'tree id'],
       a: "Try our free photo identifier: jewelcreektreeservice.com/tree-id.html - snap the bark, the needles or leaves, and the whole tree, and it'll tell you the species and how sure it is. Runs right on your phone. If it isn't sure, email your photos to jewelcreektreeservice@gmail.com and we'll tell you."
     },

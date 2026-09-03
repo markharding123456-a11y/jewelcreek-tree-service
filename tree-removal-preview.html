@@ -54,6 +54,14 @@
     .sig-disclaimer { font-size: 0.8rem; color: #8a8a8a; margin-top: 1rem; }
     .sig-cta { margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid rgba(200,169,110,0.3); display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHXY0PFWSS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-ZHXY0PFWSS");
+  </script>
 </head>
 <body>
 
@@ -400,6 +408,8 @@
       $('sigEditor').hidden = true; $('sigResult').hidden = false; bar.hidden = true; status.textContent = ''; go.disabled = false;
       resultBlob = null;
       $('sigShare').hidden = !(navigator.share && navigator.canShare);
+      var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (isiOS && !$('sigShare').hidden) { $('sigSave').textContent = 'Save / share image'; $('sigSave').classList.remove('btn-primary'); $('sigSave').classList.add('btn-outline'); $('sigShare').classList.remove('btn-outline'); $('sigShare').classList.add('btn-primary'); $('sigShare').textContent = 'Share / save to Photos'; }
       $('sigResultHint').textContent = bigArea ? 'That was a large area — fills that big are rougher. If it looks off, try Start over and select just the tree.' : 'Not quite right? “Paint more” lets you touch up any spot and run it again.';
       $('sigQuote').href = 'contact.html?service=' + encodeURIComponent('Danger Tree Removal') + '&msg=' + encodeURIComponent('I used the See It Gone preview on your website and would like a quote to remove the tree I previewed. ');
       $('sigCompare').scrollIntoView({ behavior: 'smooth', block: 'start' });
